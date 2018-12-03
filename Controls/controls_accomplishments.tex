@@ -1,0 +1,8 @@
+%%
+%%  Significant Accomplishments and Open Issues
+%%
+
+\indent\indent The controls \& instrumentations subsystem was a success for this iteration of the project as it introduced major improvements and new features that were lacking in the previous iteration. Sensors used by the previous iteration were replaced with higher fidelity ones whenever it was needed. All the MCU used by the previous teams were consolidated into a pair of RPi's that interface with all the on-board sensors and peripherals. In addition, a PCB was designed to reduce circuit complexity and ensure proper connections and clean signal. Moreover, hardware and software filters were implemented for signal smoothing. Furthermore, the ORE that was developed provides feedback control to the motor to guarantee proper operation. Last but not least, the development of a ground control system for data communications was a huge success, providing the user with real-time data monitoring and the ability to issue commands remotely.
+All in all, the subsystem meets the system requirements and design constraints stipulated in ~\ref{sys_reqs}
+
+A couple of open issues still stand. For instance, even though the rotary encoder was tested to be fully functional, the team never had the chance to integrate it alongside the PID controller that was developed in conjunction with the VEX motor controller. This is an important component and is vital to the system's success and proper integration \& testing must take place. Lastly, the actuator was tested in a simulated drop and had a great response time, however it was not tested in conjunction with the master cylinder in charge of applying the brakes.

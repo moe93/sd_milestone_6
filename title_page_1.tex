@@ -186,6 +186,12 @@ The first generation prototype as it currently stands consists of a platform and
 % ---------------------------------------------------------
 % ---------------------------------------------------------
 
+\include{revision_history}
+
+% ---------------------------------------------------------
+% ---------------------------------------------------------
+% ---------------------------------------------------------
+
 \newpage
 \section*{Terms and Abbreviations}
 
@@ -204,6 +210,7 @@ IR      & Infra-red                                         \\
 LED     & Light Emitting Diode                              \\
 Mbps    & Mega Bits per Second                              \\
 ORE     & Optical Rotary Encoder                            \\
+PCB     & Printed Circuit Board                             \\
 PPR     & Pulses Per Revolution                             \\
 PSU     & Power Supply Unit                                 \\
 PWM     & Pulse Width Modulation                            \\
@@ -298,107 +305,142 @@ Please note, as previously stated, the work of our team is largely based on the 
 
 \subsection{Microgravity Research Platforms}
 
-\indent\indent Today there exists three main methods for achieving microgravity conditions for experimentation, which include drop towers, parabolic flights, and orbital platforms. Drop towers, as their name implies, consist of a chute or tower through which a payload is dropped. The length of microgravity and quality is dependent on the height of the tower and the air resistance the payload experiences. To achieve quality microgravity conditions, drop towers range from a few meters to over one hundred meters and the tower may or may not have air evacuated to create vacuum conditions. Parabolic flights allow experimenters to place their payload into an airplane that then flies through a series of parabolic arcs that create microgravity conditions lasting on the order of tens of seconds. Lastly, orbital platforms such as cubesats or the International Space Station, allow for long term and high-quality microgravity conditions but may be prohibitively costly. Beyond these three main methods also existences unique experimental system, which are often less utilized and include the Japanese Aerospace eXploration Agency’s (JAXA) Balloon-based Operation Vehicle (BOV) and quadcopter based paylods. Of all these techniques, our experiment will most closely resemble the JAXA’s BOV system.
+\indent\indent Today there exists three main methods for achieving microgravity conditions for experimentation, which include drop towers, parabolic flights, and orbital platforms. Drop towers, as their name implies, consist of a chute or tower through which a payload is dropped. The length of microgravity and quality is dependent on the height of the tower and the air resistance the payload experiences. To achieve quality microgravity conditions, drop towers range from a few meters to over one hundred meters and the tower may or may not have air evacuated to create vacuum conditions. Parabolic flights allow experimenters to place their payload into an airplane that then flies through a series of parabolic arcs that create microgravity conditions lasting on the order of tens of seconds. Lastly, orbital platforms such as cubesats or the International Space Station, allow for long term and high-quality microgravity conditions but may be prohibitively costly. Beyond these three main methods also existences unique experimental system, which are often less utilized and include the Japanese Aerospace eXploration Agency's (JAXA) Balloon-based Operation Vehicle (BOV) and quadcopter based paylods. Of all these techniques, our experiment will most closely resemble the JAXA's BOV system.
+
+% ---------------------------------------------------------
 
 \subsubsection{Drop Towers}
 
 \indent\indent A drop tower is, as the name implies, a vertical column inside of which a payload is dropped. During free-fall the payload is expected to experience some level of microgravity conditions. The enhance the quality of microgravity, the vertical column may be evacuated of air to decrease or completely eliminate the drag force the falling payload experiences as it plummets that would otherwise tarnish the quality of microgravity. Drop towers can range from simple open air design being only several meters high to highly complex systems over 100 meters in height.
 
-\indent NASA has two drop towers both located at the Glenn Zero Gravity Research Facility located in Brookpark, Ohio. The largest of the two is a 132 meter tall vacuum chamber tower capable of achieving gravitational accelerations of less than $10^{−5}$ g’s for durations of 5.18 second [16]. It is NASA’s premier microgravity drop tower used for studying the effects of microgravity on physical phenomena such as combustion and fluid physics, to develop and demonstrate new technology for future space missions, and to develop and test experiment hardware designed for flight aboard the International Space Station or future spacecraft. The vacuum chamber itself is 142 meters tall and is capable of achieving pressures on the order of 0.05 Torr. Operational procedure begins with a crane lifting the payload to the top of the tower. Air is then evacuated from the chamber. Once the chamber is evacuated the release sequence is initiated by remotely fracturing a specially designed bolt allows the experiment to begin free fall. During the drop the experiment operates autonomously with all experiment power, data acquisition, and control functions located on the vehicle. After falling for approximately 5 seconds the experiment vehicle is stopped in the decelerator cart, located at the bottom of the chamber. The decelerator cart is filled with 3mm diameter expanded polystyrene beads that dissipate the kinetic energy of the 2500 lbs. experiment vehicle. Maximum velocity at the point of deceleration approach $50.5 m/s$. The vehicle decelerates from its peak velocity to a standstill in 4.6m of of expanded polystyrene and experiences a peak deceleration rate approaching $65$ g’s [16].
+NASA has two drop towers both located at the Glenn Zero Gravity Research Facility located in Brookpark, Ohio. The largest of the two is a 132 meter tall vacuum chamber tower capable of achieving gravitational accelerations of less than $10^{\minus 5}$ G's for durations of 5.18 second \cite{NASA0G}. It is NASA's premier microgravity drop tower used for studying the effects of microgravity on physical phenomena such as combustion and fluid physics, to develop and demonstrate new technology for future space missions, and to develop and test experiment hardware designed for flight aboard the International Space Station or future spacecraft. The vacuum chamber itself is 142 meters tall and is capable of achieving pressures on the order of $0.05 torr$. Operational procedure begins with a crane lifting the payload to the top of the tower. Air is then evacuated from the chamber. Once the chamber is evacuated the release sequence is initiated by remotely fracturing a specially designed bolt allows the experiment to begin free fall. During the drop the experiment operates autonomously with all experiment power, data acquisition, and control functions located on the vehicle. After falling for approximately 5 seconds the experiment vehicle is stopped in the decelerator cart, located at the bottom of the chamber. The decelerator cart is filled with $3 mm$ diameter expanded polystyrene beads that dissipate the kinetic energy of the $2500 lb$. experiment vehicle. Maximum velocity at the point of deceleration approach $50.5 \sfrac{m}{s}$. The vehicle decelerates from its peak velocity to a standstill in $4.6 m$ of of expanded polystyrene and experiences a peak deceleration rate approaching 65 g's \cite{NASA0G}.
 
-\indent The second drop tower at NASA Glenn Research Center is an open-air 24 meter chute capable of achieving 2.2 seconds of microgravity conditions on the order of $10^−3$ g’s [17]. Because the experimental payload is open to the air, it is also subject to the drag forces due to atmosphere. To minimize these effects researchers employ a drag shield which increase the aerodynamic performance of the payload allowing for diminished drag forces. The payload itself is isolated from the drag shield and falls 19 cm relative to the structure, allowing for optimized microgravity conditions. The payload and shield are then stopped by an airbag deployed at the bottom of the tower [18].
+The second drop tower at NASA Glenn Research Center is an open-air 24 meter chute capable of achieving 2.2 seconds of microgravity conditions on the order of $10^{\minus 3}$ G's \cite{JAXALabs}. Because the experimental payload is open to the air, it is also subject to the drag forces due to atmosphere. To minimize these effects researchers employ a drag shield which increase the aerodynamic performance of the payload allowing for diminished drag forces. The payload itself is isolated from the drag shield and falls 19 cm relative to the structure, allowing for optimized microgravity conditions. The payload and shield are then stopped by an airbag deployed at the bottom of the tower \cite{NASADropTower}. 
 
-\indent The Bremen Drop Tower located at The Center of Applied Space Technology and Microgravity (ZARM) in Bremen, Germany, has the world’s longest duration microgravity drop tower. The facility features a 120 meter vacuum chamber that can be configured to either drop payloads from the top of the tower or launch them on a catapult system from the bottom of the tower, effectively doubling the duration of microgravity. In the traditional configuration the payload capsule is pulled up to a height of 120 meters to the top of the drop tube and then released. After 4.74 seconds the capsule is decelerated in a unit filled with polystyrene pellets, much like the setup at NASA’s Glenn Research Center. Vacuum pumps evacuate the chamber of air to pressure of one ten thousandth of the normal air pressure [19]. In catapult mode a pneumatically driven launch system location at the base of the tower accelerates the capsule to speeds of approximately 168 kilometers per hour in just 0.25 seconds. The velocity and launching force is uniquely calculated for each experiment in order to provide microgravity conditions for up to 9.3 seconds. The same deceleration unit quickly replaces the launch system at the base of the tower ensuring a safe landing for the capsule [19].
+The Bremen Drop Tower located at The Center of Applied Space Technology and Microgravity (ZARM) in Bremen, Germany, has the world's longest duration microgravity drop tower. The facility features a 120 meter vacuum chamber that can be configured to either drop payloads from the top of the tower or launch them on a catapult system from the bottom of the tower, effectively doubling the duration of microgravity. In the traditional configuration the payload capsule is pulled up to a height of 120 meters to the top of the drop tube and then released. After 4.74 seconds the capsule is decelerated in a unit filled with polystyrene pellets, much like the setup at NASA's Glenn Research Center. Vacuum pumps evacuate the chamber of air to pressure of one ten thousandth of the normal air pressure \cite{ZARM}. In catapult mode a pneumatically driven launch system location at the base of the tower accelerates the capsule to speeds of approximately 168 kilometers per hour in just 0.25 seconds. The velocity and launching force is uniquely calculated for each experiment in order to provide microgravity conditions for up to 9.3 seconds. The same deceleration unit quickly replaces the launch system at the base of the tower ensuring a safe landing for the capsule \cite{ZARM}. 
+
+% ---------------------------------------------------------
 
 \subsubsection{Parabolic Flights}
 
-\indent\indent Parabolic flights, which offer approximately 20-25 seconds of microgravity for 25-30 consecutive parabolas, are currently priced at \$38,500 for a single research team [5]. They offer researchers the ability to test their experiment payloads repeatedly while being present to operate them. Payloads can be either rigidly attached to the plane or be disconnected from their storage unit during flight and free float about the cabin during the periods of microgravity- something unique to parabolic flights. Microgravity is achieved by angling the plane upward, experiencing approximately $1.8$ g’s, then smoothly arcing and angling downward, creating the weightless sensation. The actual gravity experienced on parabolic flights is not exactly $0$ g, but more accurately $0 ± 0.01$ g.
+\indent\indent Parabolic flights, which offer approximately 20-25 seconds of microgravity for 25-30 consecutive parabolas, are currently priced at \$38,500 for a single research team [5]. They offer researchers the ability to test their experiment payloads repeatedly while being present to operate them. Payloads can be either rigidly attached to the plane or be disconnected from their storage unit during flight and free float about the cabin during the periods of microgravity- something unique to parabolic flights. Microgravity is achieved by angling the plane upward, experiencing approximately 1.8 g's,  then smoothly arcing and angling downward, creating the weightless sensation. The actual gravity experienced on parabolic flights is not exactly 0 g, but more accurately $0 \pm 0.01$.
 
-\indent An advantage of parabolic flights is the large number of parabolas flown. Having a large number of parabolas and, consequently, multiple intervals of microgravity, allows researchers to operate their experiments 20-30 times, ensuring more accurate and usable data. During flight, if the experiment becomes non-operational, researchers have the ability to make adjustments to hopefully restore all function and run it during the next parabola. This ties into another advantage of being able to fly onboard with your payload. During other methods of simulating microgravity researchers are not able to operate their experiment themselves, but rather it needs to be fully automated. A third advantage of parabolic flights is the severity of g-forces experienced by the payloads is a maximum of $2$ g’s [16]. This is much lower than that of drop towers and suborbital rockets, reducing damage on experiments and offering more design flexibility.
+An advantage of parabolic flights is the large number of parabolas flown. Having a large number of parabolas and, consequently, multiple intervals of microgravity, allows researchers to operate there experiments 20-30 times, ensuring more accurate and usable data. During flight, if the experiment becomes non-operational, researchers have the ability to make adjustments to hopefully restore all function and run it during the next parabola. This ties into another advantage of being able to fly onboard with your payload. During other methods of simulating microgravity researchers aren't able to operate their experiment themselves, but rather it needs to be fully automated. A third advantage of parabolic flights is the severity of g-forces experienced by the payloads is a maximum of 2 g's [16]. This is much lower than that of drop towers and suborbital rockets, reducing damage on experiments and offering more design flexibility.
 
-\indent A major disadvantage of parabolic flights is the frequency of which they occur. Currently, ZeroG offers research flights twice per year. These dates are set by the company far in advance, and are subject to change without warning due to weather disturbances or occupied airspace. An- other disadvantage is the environment itself- parabolic flights require human interaction with the payloads, increasing the probability for human error. An additional disadvantage is the quality of microgravity. Microgravity is defined as 10−9 g, but parabolic flights produce approximately $0.01$ g’s. Additionally, the gravity during those 30 seconds can fluctuate, invalidating the testing done.
+A major disadvantage of parabolic flights is the frequency of which they occur. Currently, ZeroG offers research flights twice per year. These dates are set by the company far in advance, and are subject to change without warning due to weather disturbances or occupied airspace. Another disadvantage is the environment itself- parabolic flights require human interaction with the payloads, increasing the probability for human error. An additional disadvantage is the quality of microgravity. Microgravity is defined as $10^{\minus 9}$ g, but parabolic flights produce approximately 0.01 g's. Additionally, the gravity during those 30 seconds can fluctuate, invalidating the testing done.
+
+% ---------------------------------------------------------
 
 \subsubsection{Orbital/Suborbital Platforms}
 
-\indent\indent For longer durations of microgravity, researchers may look to suborbital and orbital plat- forms. By definition, a suborbital space flight operates at an altitude higher than 100 km (328,000 ft) above sea level. This altitude is classified as the Karman line, chosen by the Federation Aeronautique Internationale; the USAF and the FAA consider a lower altitude of 80.47 Km (264,000 ft) as the altitude to qualify as space flight. These options offer cleaner microgravity for longer periods of time, but come with their own unique disadvantages.
+\indent\indent For longer durations of microgravity, researchers may look to suborbital and orbital platforms. By definition, a suborbital space flight operates at an altitude higher than $100 Km$ (328,000 ft) above sea level. This altitude is classified as the Kármán line, chosen by the Fédération Aéronautique Internationale; the USAF and the FAA consider a lower altitude of $80.47 Km$ (264,000 ft) as the altitude to qualify as space flight. These options offer cleaner microgravity for longer periods of time, but come with their own unique disadvantages. 
 
-\indent Blue Origin’s New Shepard rocket provides approximately 3 minutes worth of clean microgravity and can accommodate payloads up to 50 lbs. They provide vehicle telemetry data, electrical power, cameras, data storage and robust control systems. Blue Origin has flown multiple payloads, including four from UCF’s Physics Department (COLLIDE). Virgin Galactic’s SpaceshipTwo is still undergoing testing, but has begun reserving spots for research payloads upon completion. SpaceshipTwo will have a $0$ g coast phase lasting approximately 4 minutes. 
+Blue Origin's New Shepard rocket provides approximately 3 minutes worth of clean microgravity and can accommodate payloads up to 50 lbs. They provide vehicle telemetry data, electrical power, cameras, data storage and robust control systems. Blue Origin has flown multiple payloads, including four from UCF's Physics Department (COLLIDE). Virgin Galactic's SpaceshipTwo is still undergoing testing, but has begun reserving spots for research payloads upon completion. SpaceshipTwo will have a 0 g coast phase lasting approximately 4 minutes.
 
-\indent Disadvantages associated with suborbital flights include the severe vibration experienced by 24
-experiment payloads, autonomous operation, and varying interface requirements between companies. Vibrational effects are substantial on suborbital flights. SpaceshipTwo expects to experience a maximum of $3.8$ g during the boost phase, and a maximum of $6$ g during deceleration [20]. Because of this, research team members must thoroughly prove way in advance via simulations and testing that their payloads are capable of undergoing those forces while maintaining their overall safety levels. Autonomous operation and varying interface requirements are also a disadvantage since payloads need to be manipulated depending on the company they are flying with. Blue Origin offers signal triggering for payloads, as well as a detailed flight profile, while Virgin Galactic requires all triggering to be handled by the researcher teams.
+Disadvantages associated with suborbital flights include the severe vibration experienced by experiment payloads, autonomous operation, and varying interface requirements between companies. Vibrational effects are substantial on suborbital flights. SpaceshipTwo expects to experience a maximum of 3.8 g during the boost phase, and a maximum of 6 g during deceleration \cite{L2}. Because of this, research team members must thoroughly prove way in advance via simulations and testing that their payloads are capable of undergoing those forces while maintaining their overall safety levels. Autonomous operation and varying interface requirements are also a disadvantage since payloads need to be manipulated depending on the company they are flying with. Blue Origin offers signal triggering for payloads, as well as a detailed flight profile, while Virgin Galactic requires all triggering to be handled by the researcher teams.
 
-\indent Another major disadvantage of suborbital flights is the infrequency of flight. Because these flights are so costly, they are booked more than a year in advance, require constant communication between the research team and flight company, and a series of paperwork milestones to ensure adequate payload operation and safety. Because of this, flights are often delayed anywhere from 3 months to over a year, depending on the circumstance. Additionally, this may not be a long term solution for researchers since the end goal of these companies is space tourism- experiment payload lockers will be replaced by paying human passengers wanting to become astronauts.
+Another major disadvantage of suborbital flights is the infrequency of flight. Because these flights are so costly, they are booked more than a year in advance, require constant communication between the research team and flight company, and a series of paperwork milestones to ensure adequate payload operation and safety. Because of this, flights are often delayed anywhere from 3 months to over a year, depending on the circumstance. Additionally, this may not be a long term solution for researchers since the end goal of these companies is space tourism- experiment payload lockers will be replaced by paying human passengers wanting to become astronauts.
 
-\indent The most well-known orbital platform is the International Space Station (ISS). The ISS was developed by a multitude of nations with the purpose of serving as a shared research platform. The research aboard the ISS is categorized into 3 sections: NASA research, ISS International Laboratories/CASIS, and International Partners. There are 6 phases associated with operating a research payload aboard the station, resulting in a lengthly approval process for all payloads. Today, the only American company to visit the ISS and deliver science payloads is SpaceX via its CRS-8.
+The most well-known orbital platform is the International Space Station (ISS). The ISS was developed by a multitude of nations with the purpose of serving as a shared research platform. The research aboard the ISS is categorized into 3 sections: NASA research, ISS International Laboratories/CASIS, and International Partners. There are 6 phases associated with operating a research payload aboard the station, resulting in a lengthly approval process for all payloads. Today, the only American company to visit the ISS and deliver science payloads is SpaceX via its CRS-8.
 
-\indent While the ISS offers the longest duration of microgravity for research experiments, there are many disadvantages associated with this particular method. First, and most obvious, the selection process is the most selective. While the station houses an extensive number of experiments, the approval process is highly competitive. The cost of sending a research payload to the ISS is also the highest of all methods of testing, requiring funding from NASA grants -or the like- to fund this method of testing. Testing aboard the ISS is the ideal method for a majority of experiments due to the exponentially longer duration of clean microgravity, but is unrealistic for most.
+While the ISS offers the longest duration of microgravity for research experiments, there are many disadvantages associated with this particular method. First, and most obvious, the selection process is the most selective. While the station houses an extensive number of experiments, the approval process is highly competitive. The cost of sending a research payload to the ISS is also the highest of all methods of testing, requiring funding from NASA grants -or the like- to fund this method of testing. Testing aboard the ISS is the ideal method for a majority of experiments due to the exponentially longer duration of clean microgravity, but is unrealistic for most.
+
+% ---------------------------------------------------------
 
 \subsubsection{JAXA's BOV}
 
-\indent\indent The Japanese Aerospace Exploration Agency’s (JAXA) Institute of Space and Astronautical Science has developed a Balloon-based Operation Vehicle (BOV) that is a link between terres- trial drop towers and the innovative concept our group is working on. The system consists of a high-altitude balloon that lifts a 700 kg payload to approximately 40 km where the BOV is then disconnected and plummets for 20 to 30 km before deploying parachutes to slow the descent into the ocean [17]. The BOV achieves approximately 30 seconds of microgravity as low as $10^{-4}$ g [17]. The BOV itself was designed to be extremely aerodynamic, which resulted in a structure approximating that of a missile or rocket. The experimental payload was then housed inside of this structure where it remained for the entire duration of the flight.
+\indent\indent The Japanese Aerospace Exploration Agency’s (JAXA) Institute of Space and Astronautical Science has developed a Balloon-based Operation Vehicle (BOV) that is a link between terrestrial drop towers and the innovative concept our group is working on. The system consists of a high-altitude balloon that lifts a $700 Kg$ payload to approximately $40 Km$ where the BOV is then disconnected and plummets for $20$ to $30 Km$ before deploying parachutes to slow the descent into the ocean \cite{JAXALabs}. The BOV achieves approximately 30 seconds of microgravity as low as 10-4 \cite{JAXALabs}. The BOV itself was designed to be extremely aerodynamic, which resulted in a structure approximating that of a missile or rocket. The experimental payload was then housed inside of this structure where it remained for the entire duration of the flight.
 
-\indent JAXA’s BOV was a multi-generational project with each subsequent iteration building on the successes and failures of the previous iteration. The original design incorporated their experimental payload into the BOV by rigidly securing it to the structure. This allowed the payload to remain safely fixed with the caveat that it experienced any vibrational forces or turbulence that the BOV experienced during free-fall. Later generations incorporated one-dimensional and three-dimensional drag-free systems that helped to isolate the payload from the aeroshell and thus insulating it from the forces that would bring the payload out of quality microgravity. The one-dimensional system illustrated in [Fig. 2] consisted of a simple rail system that allowed the payload to move independently from the BOV in the vertical direction. Cold gas thrusters were also incorporated into the BOV to accelerate the capsule when drag forces began to disturb the BOV/payload displacement. Microgravity conditions lower than $10^{−3}$ g’s were achieved for a duration of approximately 30 seconds [21]. The three-dimensional drag-free system, also illustrated in [***Fig. 2***] consisted of a spherical payload fixed to the BOV via tethers. The BOV then used 60 cold gas thrusters to keep the outer structure clear of the free-falling payload contained within it. Laser displacement sensors between the two track clearances due to external drag forces. Microgravity conditions up to $10^{−3}$ G’s were experienced for durations of only 8 to 10 seconds [21]. A tri-axial accelerometer (Silicon Design Inc. Model 2440) was used to track multi-dimensional acceleration to verify and track microgravity conditions. A RHOM-Riken R2-Micro datalogger with a 900 Hz sampling rate was used to capture sensor data [17]. Temperature and humidity were also captured for climate control to keep the payload within operating conditions.
+JAXA's BOV was a multi-generational project with each subsequent iteration building on the successes and failures of the previous iteration. The original design incorporated their experimental payload into the BOV by rigidly securing it to the structure. This allowed the payload to remain safely fixed with the caveat that it experienced any vibrational forces or turbulence that the BOV experienced during free-fall. Later generations incorporated one-dimensional and three-dimensional drag-free systems that helped to isolate the payload from the aeroshell and thus insulating it from the forces that would bring the payload out of quality microgravity. The one-dimensional system illustrated in [Fig. ~\ref{fig:JAXABOV.png}] consisted of a simple rail system that allowed the payload to move independently from the BOV in the vertical direction. Cold gas thrusters were also incorporated into the BOV to accelerate the capsule when drag forces began to disturb the BOV/payload displacement. Microgravity conditions lower than $10^{\minus 3}$ g's were achieved for a duration of approximately 30 seconds \cite{JAXAResults}.  The three-dimensional drag-free system, also illustrated in [Fig. ~\ref{fig:JAXABOV.png}] consisted of a spherical payload fixed to the BOV via tethers. The BOV then used 60 cold gas thrusters to keep the outer structure clear of the free-falling payload contained within it. Laser displacement sensors between the two track clearances due to external drag forces. Microgravity conditions up to $10^{\minus 3}$ G's were experienced for durations of only 8 to 10 seconds \cite{JAXAResults}. A tri-axial accelerometer (Silicon Design Inc. Model 2440) was used to track multi-dimensional acceleration to verify and track microgravity conditions. A RHOM-Riken R2-Micro datalogger with a $900 Hz$ sampling rate was used to capture sensor data \cite{JAXALabs}. Temperature and humidity were also captured for climate control to keep the payload within operating conditions.
 
-**** FIX THE FIGURE HERE 
-Figure 2: Drag-free external force isolation systems for payloads in JAXA’s BOV vehicle.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.4\textwidth]{Figures/JAXABOV.png}
+  \caption{\label{fig:JAXABOV.png}Drag-free external force isolation systems for payloads in JAXA's BOV vehicle.}
+\end{figure}
 
-\indent A major advantage of the one-dimensional drag-free system is that it allowed for a much larger payload and provided almost four times the duration of quality microgravity conditions. The JAXA BOV system most closely approximates our design and provides a wealth of useful information that will influence our design and procedures. Most notably, the vibrational damping/disturbance rejection system, launch procedures, and control technology should all be carefully considered for integration into our design.
+A major advantage of the one-dimensional drag-free system is that it allowed for a much larger payload and provided almost four times the duration of quality microgravity conditions. The JAXA BOV system most closely approximates our design and provides a wealth of useful information that will influence our design and procedures. Most notably, the vibrational damping/disturbance rejection system, launch procedures, and control technology should all be carefully considered for integration into our design. 
 
+
+
+% ---------------------------------------------------------
 
 \subsection{Aeroshell}
 
 \subsubsection{Geometry}
 
-\indent\indent For the aeroshell, the main goal of the geometry is to decrease the amount of drag force and initial pressure while dropping through the stratosphere to achieve microgravity. A symmetrical airfoil is chosen because it will not produce a significant amount of lift and it decreases the drag coefficient during the drop. The specific symmetrical airfoil chosen is a hydrofoil, which has the main purpose of lifting a boat’s hull above water. The hydrofoil decreases drag and also gains speed on its travel path. There are many other airfoils that are candidates, such as, aerobatic and NACA airfoils. The hydrofoil is not a conventional airfoil that can be seen on a general aircraft wing or tail. Hydrofoils tend to have a sharper trailing edges, which is similar to subsonic flight airfoils.
+\indent\indent For the aeroshell, the main goal of the geometry is to decrease the amount of drag force and initial pressure while dropping through the stratosphere to achieve microgravity. A symmetrical airfoil is chosen because it will not produce a significant amount of lift and it decreases the drag coefficient during the drop. The specific symmetrical airfoil chosen is a hydrofoil, which has the main purpose of lifting a boat's hull above water. The hydrofoil decreases drag and also gains speed on its travel path. There are many other airfoils that are candidates, such as, aerobatic and NACA airfoils. The hydrofoil is not a conventional airfoil that can be seen on a general aircraft wing or tail. Hydrofoils tend to have a sharper trailing edges, which is similar to subsonic flight airfoils.
 
-\indent Optimization of airfoils to decrease drag is the current technology to produce better and more efficient airfoils for various uses. These airfoil uses range from turbines, turbofans, propellers, and airliners. The optimization process tends to yield results for high lift to drag ratio. The process can use a Matlab code and call another program within the code to retrieve different airfoils and ”mutate” the airfoils through each iteration. The called program tends to be XFoil, which is a program for design and analysis of subsonic isolated airfoils. The different methods used within the optimization codes to parameterize the airfoils are PARSEC, CST, and a variant of Karman-Trefftz. For the purpose of this chosen symmetric airfoil, the desire is to have a low drag and to minimize any lift that would occur during flight. There are little to no codes created for symmetric airfoils with the main purpose of decreasing the drag coefficient. However, a code by Zheng Wang using Genetic Algorithm optimizes symmetrical airfoils [22]. This optmization code also uses XFoil as a program to create ”mutated” airfoils and to iterate the airfoils until the optimizer has converged.
+Optimization of airfoils to decrease drag is the current technology to produce better and more efficient airfoils for various uses. These airfoil uses range from turbines, turbofans, propellers, and airliners. The optimization process tends to yield results for high lift to drag ratio. The process can use a Matlab code and call another program within the code to retrieve different airfoils and "mutate" the airfoils through each iteration. The called program tends to be XFoil, which is a program for design and analysis of subsonic isolated airfoils. The different methods used within the optimization codes to parameterize the airfoils are PARSEC, CST, and a variant of Karman-Trefftz. For the purpose of this chosen symmetric airfoil, the desire is to have a low drag and to minimize any lift that would occur during flight. There are little to no codes created for symmetric airfoils with the main purpose of decreasing the drag coefficient. However, a code by Zheng Wang using Genetic Algorithm optimizes symmetrical airfoils \cite{optimize}. This optmization code also uses XFoil as a program to create "mutated" airfoils and to iterate the airfoils until the optimizer has converged.
+
+% ---------------------------------------------------------
 
 \subsubsection{Payload}
 
-\indent\indent To ensure the system is versatile enough to accommodate a wide variety of microgravity pay- loads, the internal structure of the aeroshell will be designed to the specifications of a middeck locker. The three designs considered for housing the payload were a static attachment, an linear rail system, and a 3 dimensional isolation system. The static attachment would be the simplest to implement but the most likely to lower the quality of microgravity for the payload. The linear rail would improve the quality of microgravity considerably over a static attachment, but would also greatly increase complexity and modes of failure. A 3 dimensional isolation system, similar to that employed by JAXA [17] would allow for the greatest fidelity of microgravity but also the greatest complexity.
+\indent\indent To ensure the system is versatile enough to accommodate a wide variety of microgravity payloads, the internal structure of the aeroshell will be designed to the specifications of a middeck locker. The three designs considered for housing the payload were a static attachment, an linear rail system, and a 3 dimentional isolation system. The static attachment would be the simplest to implement but the most likely to lower the quality of microgravity for the payload. The linear rail would improve the quality of microgravity considerably over a static attachment, but would also greatly increase complexity and modes of failure. A 3 dimentional isolation system, similar to that employed by JAXA \cite{JAXALabs} would allow for the greatest fidelity of microgravity but also the greatest complexity. 
 
-\indent The standard mid-deck locker was the payload size specification requested by the intended user of the microgravity platform. The aeroshell will use a standard middeck locker to contain the payloads, and mount any payload hardware to a standard adapter plate. This simplifies the design requirements of the aeroshell internal hardware because whichever isolation technique is used, the payload will always be a standard size and shape.
+The standard middeck locker was the payload size specification requested by the intended user of the microgravity platform. The aeroshell will use a standard middeck locker to contain the payloads, and mount any payload hardware to a standard adaptor plate. This simplifies the design requirements of the aeroshell internal hardware because whichever isolation technique is used, the payload will always be a standard size and shape.
 
-\indent The choice of mounting and isolation drives many subsequent design requirements. A simple attachment would minimize the greatest diameter of the aeroshell. The aeroshell would need only to fit the width of the middeck locker at the top and bottom panels. A linear rail would increase the aeroshell diameter because the aeroshell would need to accommodate the width of the middeck locker at both the top and the bottom of the rail system. To maintain the chosen aeroshell shape, the length and diameter of the aeroshell would increase significantly. This holds true for the 3-dimensional isolation system as well. The simple attachment is the recommended method for the current iteration of the project.
+The choice of mounting and isolation drives many subsequent design requirements. A simple attachment would minimize the greatest diameter of the aeroshell. The aeroshell would need only to fit the width of the middeck locker at the top and bottom panels. A linear rail would increase the aeroshell diameter because the aeroshell would need to accommidate the width of the middick locker at both the top and the bottom of the rail system. To maintain the chosen aeroshell shape, the length and diameter of the aeroshell would increase significantly. This holds true for the 3 dimentional isolation system as well. The simple attachment is the recommended method for the current iteration of the project.
 
-\indent The two more complicated options also introduce the need of a control system. To ensure the benefit of the linear rail is applied to every drop test, the aeroshell would need a method to raise the payload within the aeroshell, hold the payload at the top of the rail, but still allow the payload to slide along the rail unimpeded. The recommended method to achieve this is to raise the payload with a pushing linear actuator until the payload reaches the top, engage an electromagnet at the top of the rail to hold the payload in place while the linear actuator retracts, then simultaneously release the electromagnet and the aeroshell as a whole. This system is strongly recommended for future iterations of this project, but ultimately out of the scope of the current iteration of the aeroshell.
+The two more complicated options also introduce the need of a control system. To ensure the benefit of the linear rail is applied to every drop test, the aeroshell would need a method to raise the payload within the aeroshell, hold the payload at the top of the rail, but still allow the payload to slide along the rail unimpeded. The recommended method to achieve this is to raise the payload with a pushing linear actuator until the payload reaches the top, engage an electromagnet at the top of the rail to hold the payload in place while the linear actuator retracts, then simultaneously release the electormagnet and the aeroshell as a whole. This system is strongly recommended for future iterations of this project, but ultimately out of the scope of the current iteration of the aeroshell.
+
+% ---------------------------------------------------------
 
 \subsubsection{Latch}
 
-\indent\indent Since the aeroshell is to be manufactured in halves it warrants a way to align and fix them together. Many candidates were considered such as case latches (used in heavy duty road cases), snap latches (used in many flexible case enclosures), and hook and eye latches. Ultimately, it was decided to incorporate roto-lock coffin latches into the design for their strength, holding capacity (750 kg each), and ease of use. With one hex key, the coffin latch can be engaged or disengaged to join or release the two halves in seconds; however, since it is originally designed as a “latching biscuit joint” an additional aluminum part will need to be machined and bonded to the aeroshell to make use of it as an internal latch. Also, additional carbon fiber layers can be applied during fabrication to thicken and increase strength of the attachment points to avoid pull-through and shear-out failure conditions at the bolt interface. Finally, if necessary, a small scoop could be installed over the bolts to help alleviate the drag of the exposed metal. Although the aeroshell will be directly fastened to the internal structure in separate locations, having the coffin latch will speed up assembly and provide a redundant system to ensure the shell stays closed and aligned.
+\indent\indent Since the aeroshell is to be manufactured in halves it warrants a way to align and fix them together. Many candidates were considered such as case latches (used in heavy duty road cases), snap latches (used in many flexible case enclosures), and hook and eye latches. Ultimately, it was decided to incorporate roto-lock coffin latches into the design for their strength, holding capacity ($750 kg$ each), and ease of use. With one hex key, the coffin latch can be engaged or disengaged to join or release the two halves in seconds; however, since it is originally designed as a “latching biscuit joint” an additional aluminum part will need to be machined and bonded to the aeroshell to make use of it as an internal latch. Also, additional carbon fiber layers can be applied during fabrication to thicken and increase strength of the attachment points to avoid pull-through and shear-out failure conditions at the bolt interface. Finally, if necessary, a small scoop could be installed over the bolts to help alleviate the drag of the exposed metal. Although the aeroshell will be directly fastened to the internal structure in separate locations, having the coffin latch will speed up assembly and provide a redundant system to ensure the shell stays closed and aligned.
+
+% ---------------------------------------------------------
 
 \subsection{TUMBR}
 
 \subsubsection{Tether}
 
-\indent\indent The material of the tether must be lightweight, durable, and resistant to atmospheric conditions that may weaken the functionality. The best solution found for this material is Spectra, developed by Honeywell. The material is known to be one of the world’s strongest and lightest synthetic fibers, and has been implemented by the Department of Defense (DOD) for military and police applications. Spectra is fifteen times stronger than steel, more durable than polyester, and resists corrosion, chemicals, and abrasion, making it an ideal choice for repeated impact and atmospheric conditions. The disadvantages found with this material are the high cost and lead time. The material chosen by the previous team for the scaled model, however, was Kevlar, due to its high strength, low creep, good temperature performance, and low stretch [23]. For this iteration of the project we will be moving forward with Spectra by Honeywell and proceeding with a 9 second drop. A major constraint of the tether will be the diameter and weight, which was allocated to a max of 5mm and 100 kg by the previous team. By scaling up the project to perform a 9 second drop, the length of tether needed will be approximately 600 km.
+\indent\indent The material of the tether must be lightweight, durable, and resistant to atmospheric conditions that may weaken the functionality. The best solution found for this material is Spectra, developed by Honeywell. The material is known to be one of the world’s strongest and lightest man-made fibers, and has been implemented by the Department of Defense (DOD) for military and police applications. Spectra is fifteen times stronger than steel, more durable than polyester, and resists corrosion, chemicals, and abrasion, making it an ideal choice for repeated impact and atmospheric conditions. The disadvantages found with this material are the high cost and lead time. The material chosen by the previous team for the scaled model, however, was Kevlar, due to its high strength, low creep, good temperature performance, and low stretch \cite{trt}. For this iteration of the project we will be moving forward with Spectra by Honeywell and proceeding with a 9 second drop. A major constraint of the tether will be the diameter and weight, which was allocated to a max of $5 mm$ and $100 Kg$ by the previous team. By scaling up the project to perform a 9 second drop, the length of tether needed will be approximately 600 km.
+
+% ---------------------------------------------------------
 
 \subsubsection{Unit}
 
-\indent\indent The platform structure will house the tether/reel and tether guide, braking system, and dual motors. The previous iteration of the project constructed the platform frame from 80/20 Aluminum. This material is commonly used in engineering applications due to the low cost, high strength to weight ratio, availability, and ease of machining. 80/20 is 2x stronger than steel and approximately one third the weight, offering a unique opportunity for frame applications. This material is also much less corrosive than comparable metals, and keeps its shape when exposed to temperature changes- unlike steel. 80/20 also comes in a T-slot design, which makes adjusting attachment points and altering designs much more feasible since those attachments are not permanent. As a result, these pieces can be re-purposed at the conclusion of a project rather than discarded- reducing overall costs.
+\indent\indent The platform structure will house the tether/reel and tether guide, braking system, and dual motors. The previous iteration of the project constructed the platform frame from 80/20 Aluminum. This material is commonly used in engineering applications due to the low cost, high strength to weight ratio, availability, and ease of machining. 80/20 is 2x stronger than steel and approximately one third the weight, offering a unique opportunity for frame applications. This material is also much less corrosive than comparable metals, and keeps its shape when exposed to temperature changes- unlike steel. 80/20 also comes in a T-slot design, which makes adjusting attachment points and altering designs much more feasible since those attachments are not permanent. As a result, these pieces can be re-purposed at the conclusion of a project rather than discarded- reducing overall costs. 
 
-\subsection{Motor}
+% ---------------------------------------------------------
+
+\subsubsection{Motor}
 
 \indent\indent The motors used in the prototype for both applications were AmpFlow E30-150 24-volt DC motor, which could operate between 12-36 volts, have $5 Nm$ of torque, produce around $750 W$, and can produce maximum RPM of $8700 RPM$. Calculations showed that $8.4 Nm$ of torque would be required to lift the aeroshell, however the motor on the system for reeling the payload back onto the spool can only produce $5 Nm$ of torque. Through a gear reduction of 9/32, a max torque of $17.78 Nm$ would be produced by the motor and would meet the required torque to raise the payload.
 
-\indent Three types of electric motors were considered for the system: AC, brushed DC and brushless DC. AC motors are powered by an alternating current that runs through a stator, producing a magnetic field. The previous team opted not to use AC motors due to their significantly higher cost and slightly increased performance. DC motors are powered via a direct current and are much more feasible at higher altitudes. A set of magnets are positioned within the stator and the armature has wire wrapped around an iron core. Depending on whether the motor is brushed or brushless determines the operation; brushless motors use a controller to activate/deactivate each coil. Brushed motors transmit power through brushes to energize the wires at specific times. Brushed DC motors require more maintenance and have a shorter life than brushless DC motors, but offer reduced initial costs and better control.
+Three types of electric motors were considered for the system: AC, brushed DC and brushless DC. AC motors are powered by an alternating current that runs through a stator, producing a magnetic field. The previous team opted not to use AC motors due to their significantly higher cost and slightly increased performance. DC motors are powered via a direct current and are much more feasible at higher altitudes. A set of magnets are positioned within the stator and the armature has wire wrapped around an iron core. Depending on whether the motor is brushed or brushless determines the operation; brushless motors use a controller to activate/deactivate each coil. Brushed motors transmit power through brushes to energize the wires at specific times. Brushed DC motors require more maintenance and have a shorter life than brushless DC motors, but offer reduced initial costs and better control.
 
-\subsection{Brake Systems}
+% ---------------------------------------------------------
+
+\subsubsection{Brake Systems}
 
 \indent\indent Braking systems can be complex to manufacture, so the previous team decided it was best to design the brake system with items which could easily be obtained from off-shelf items and replaced easily if necessary. A simple friction-based caliper and rotor setup was designed to attach to the platform and the shaft of the system. Friction based braking is a very reliable and predictable way to slow down an object, with the only major downfall being the replacement of the friction material (brake pads or rotor). The caliper and rotor on the first generation prototype were both fashioned from a Honda Fit and calculations proved that a deceleration was more than enough to bring the aeroshell to a safe halt. A linear actuator was connected to the master cylinder of the braking system so the controls and instrumentation team could precisely apply pressure when coupled with a microcontroller.
 
-\indent The braking system on the prototype is currently non-functional due a tilt in the rotor and uneven caliper mounting when assembled. The slight tilt in the rotor coupled with an uneven caliper mount produces a non-uniform deceleration with heavily increased frictional forces. The increased friction caused by this manufacturing error prevented the previous team from full integration testing.
+The braking system on the prototype is currently non-functional due a tilt in the rotor and uneven caliper mounting when assembled. The slight tilt in the rotor coupled with an uneven caliper mount produces a non-uniform deceleration with heavily increased frictional forces. The increased friction caused by this manufacturing error prevented the previous team from full integration testing.
 
-\indent The previous team used an iron rotor fashioned from a Honda Fit for their frictional braking system. The rotor on the system will be rotating approximately upwards of 5,000 revolutions per meter (RPM) for a nine second drop which leads to a large heat flux and large shear force when braking is applied. Iron rotors are heavy and known to deform and warp at high temperatures and loads. These are very undesirable traits when weight, reliability, and repeatability are three important factors dealing with this project. Carbon-ceramic brakes are used in high end cars because of the great response in both wet and dry conditions, the high durability, the low weight, resistance to corrosion and are characterized by having an extremely low deformation under high temperatures.
+The previous team used an iron rotor fashioned from a Honda Fit for their frictional braking system. The rotor on the system will be rotating approximately upwards of 5,000 revolutions per meter (RPM) for a nine second drop which leads to a large heat flux and large shear force when braking is applied. Iron rotors are heavy and known to deform and warp at high temperatures and loads. These are very undesirable traits when weight, reliability, and repeatability are three important factors dealing with this project. Carbon-ceramic brakes are used in high end cars because of the great response in both wet and dry conditions, the high durability, the low weight, resistance to corrosion and are characterized by having an extremely low deformation under high temperatures.
+% * <jkirschbaum1992@gmail.com> 2018-04-16T00:41:11.304Z:
+% 
+% " Because of these inherent traits of iron high performance cars turn their eyes to another material which will perform much better under stressful environments."    
+% 
+% Wat?
+% 
+% ^.
 
-\indent Modifications made to the braking system will include the addition of an electromagnetic braking system. The two systems will function as a combined braking system- the electromagnetic initiating first to slow the shaft to an optimal angular velocity, at which point the frictional system will begin operating to slow the speed to zero. Electromagnetic braking systems are currently used in high velocity applications, such as trains and roller coasters. A major disadvantage is the proportional braking force and velocity, meaning the system loses efficiency as the velocity decreases. For this reason a frictional system will remain a part of the design. The decreased velocity when the frictional system begins will extend the life of both the brake pad and rotor.
+Future modifications made to the braking system will include the addition of an electromagnetic braking system. The two systems will function as a combined braking system- the electromagnetic initiating first to slow the shaft to an optimal angular velocity, at which point the frictional system will begin operating to slow the speed to zero. Electromagnetic braking systems are currently used in high velocity applications, such as trains and roller coasters. A major disadvantage is the proportional braking force and velocity, meaning the system loses efficiency as the velocity decreases. For this reason a frictional system will remain a part of the design. The decreased velocity when the frictional system begins will extend the life of both the brake pad and rotor.
 
-\subsection{Reel}
+% ---------------------------------------------------------
 
-\indent\indent The reel has four main components: the shaft, tether walls, frame, and bearings. The shaft, tether walls and frame were constructed from steel, while the bearings were made from stainless steel. The frame was fabricated with 2” square 80/20 bars welded at the corners with an x-brace design at both ends to maximize strength and minimize weight. In the center, a cylindrical shaft holds two 10” diameter discs which acts as a housing to hold the tether in place on the shaft. To help release the tether from the reel, two disks were fabricated to clamp the tether and pull it off the reel at $2107 RPM$.
+\subsubsection{Reel}
 
-\indent A major consideration for the reel includes a tether guide to ensure no additional forces are
-acting on the tether and reduce overall vibration on the aeroshell. By adding this mechanism to the platform, the tether will cleanly unroll and respool each drop without tangling or knotting. Previous designs were constructed for a functioning tether guide, but their interface with the overall platform was not ideal. Current mechanisms exist and will be implemented in the design.
+\indent\indent The reel has four main components: the shaft, tether walls, frame, and bearings. The shaft, tether walls and frame were constructed from steel, while the bearings were made from stainless steel. The frame was fabricated with 2” square 80/20 bars welded at the corners with an x-brace design at both ends to maximize strength and minimize weight.  In the center, a cylindrical shaft holds two 10” diameter discs which acts as a housing to hold the tether in place on the shaft. To help release the tether from the reel, two disks were fabricated to clamp the tether and pull it off the reel at $2107 RPM$.
+
+A major consideration for the reel includes a tether guide to ensure no additional forces are acting on the tether and reduce overall vibration on the aeroshell. By adding this mechanism to the platform, the tether will cleanly unroll and respool each drop without tangling or knotting. Previous designs were constructed for a functioning tether guide, but their interface with the overall platform was not ideal. Current mechanisms exist and will be implemented in the design.
+
+% ---------------------------------------------------------
 
 \subsection{Controls \& Instrumentation}
 
@@ -456,13 +498,15 @@ The conceptualized controls and instrumentation module layout as envisioned by t
 
 \section{Professional and Societal Considerations}
 
+\indent\indent The ZAP-2 brings a novel and cost effective approach to the way researchers and scientists can get access to high quality microgravity conditions for various types of experimentation. Currently, the cost for this type of enabling technology ranges from tens of thousands to hundreds of thousands and even millions of dollars. If a disrupting new technology such as this one were to enter the marketplace it would surely allow for more scientists and researchers to have access to high quality microgravity conditions, thus creating the opportunity for scientific studies to flourish. With more affordable access to this type of research, scientists would have more money to spend on opening up opportunities for undergraduate and graduate students to join these projects. A saving in funding would also create the opportunities for more travel to conferences, new laboratory equipment, and so on. It stands to reason that if the ZAP-2 were brought to full development, the impact to the field of microgravity research would become available to more people to participate in than ever before.
+
 % ---------------------------------------------------------
 % ---------------------------------------------------------
 % ---------------------------------------------------------
 
 \section{\label{sys_reqs}System Requirements and Design Constraints}
 
-\indent\indent The design of our group's system was largely based around the concept of the first iteration design carried out by The Green Team *** cite GT\_TechReport from MS3 ***. This allowed key components and key functions that are necessary to achieve the project goals and requirements to be identified and characterized. While many of these components have been studied in further detail for optimization and upgrade the key functional requirements remain the same.
+\indent\indent The design of our group's system was largely based around the concept of the first iteration design carried out by The Green Team. This allowed key components and key functions that are necessary to achieve the project goals and requirements to be identified and characterized. While many of these components have been studied in further detail for optimization and upgrade the key functional requirements remain the same.
 
 \indent\indent Our design features two macrostructures and are detailed further in the System Concept Development section of the report (*** REF SECTION 6 ***). The TUMBR is the structure that is fixed to the stratospheric balloon and houses the tether brake and reel system, the motors, and a variety of onboard computers and sensors. The aeroshell is the structure that houses the payload, is attached to the TUMBR via the tether, and is dropped in order to experience microgravity conditions. Subsystems are first identified by the macrostructure that they belong to, either the aeroshell or TUMBR. System requirements identified for each of these assumed subsystems and then presented. Each system requirement is then traced to the project goals and requirements from which it was derived.
 
@@ -673,11 +717,15 @@ To Do: Present the system concept that the team ultimately developed.  Where app
 
 \subsection{The ZAP-2 System}
 
-\indent\indent The Zero-g Aero-Drop Project 2 (ZAP-2) system largely builds on the successes and best practices of lasts year's senior design groups *** CITE GT\_TechReport MS3 ***. A majority of the conceptual design was retained from the first iteration. However, comprehensive and thorough analyses of subsystems and their components have allowed us to refine the architecture of the system and introduce design optimizations where it was possible. The system design has also been scaled up to allow for longer duration drops on the order of 2 to 9 seconds.
+\indent\indent The Zero-g Aero-Drop Project 2 (ZAP-2) system largely builds on the successes and best practices of lasts year's senior design groups. A majority of the conceptual design was retained from the first iteration. However, comprehensive and thorough analyses of subsystems and their components have allowed us to refine the architecture of the system and introduce design optimizations where it was possible. The system design has also been scaled up to allow for longer duration drops on the order of 2 to 9 seconds.
 
-The ZAP-2 System consists of two macrostructures: the aeroshell and TUMBR. Interfacing between the two macrostructures is the tether, which firmly anchors the aeroshell to the TUMBR. Housed inside of the aeroshell is the internal structure or skeleton, which itself houses the mission payload and provides a mounting point for the tether connector and the electronics, and controls system. The TUMBR provides a rigid platform for the tether/reel, brakes, motors, and electronics and controls package to be fixed to. Each of these systems and subsystems will be detailed further in the succeeding subsections. A systems diagram created in the CAMEO System Modeler software package is shown in *** CITE FIG Flight\_Systems\_Model from MS3 ***. 
+The ZAP-2 System consists of two macrostructures: the aeroshell and TUMBR. Interfacing between the two macrostructures is the tether, which firmly anchors the aeroshell to the TUMBR. Housed inside of the aeroshell is the internal structure or skeleton, which itself houses the mission payload and provides a mounting point for the tether connector and the electronics, and controls system. The TUMBR provides a rigid platform for the tether/reel, brakes, motors, and electronics and controls package to be fixed to. Each of these systems and subsystems will be detailed further in the succeeding subsections. A systems diagram created in the CAMEO System Modeler software package is shown in [Fig. \ref{fig:CAMEO}]. 
 
-*** SHOW CAMEO IMAGE ***
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.8\textwidth]{Figures/Stupid.png}
+  \caption{\label{fig:CAMEO}CAMEO System Modeler of the ZAP-2 System}
+\end{figure}
 
 \subsection{Flight Procedure}
 
@@ -831,6 +879,7 @@ The previous team decided Spectra by Honeywell would be the most suitable option
 
 \subsubsection{Tether Guide}
 
+\indent\indent The implementation of a tether guide is important for the platform to perform multiple drops. If the tether is not evenly wound across the reel then knotting can occur and completely stop the aeroshell from dropping. The previous team came up with a design for a tether guide, but were unable to integrate it. It used a traverse roll and clutch mechanism to guide the tether as it was reeled up. This concept was compared to another option for a tether guide called a rolling ring drive. The rolling ring drive was already assembled and simple to implement. It accomplished the same task with less risk of failure. For this reason it was decided to use the rolling ring drive. A motor from the last iteration of the project will be reused with this design. A v-belt and pulley system will act as the transmission.
 
 \subsubsection{Brakes}
 
@@ -951,6 +1000,8 @@ Finding mechanisms suitable for the required braking force proved to be too diff
 \indent\indent To overcome these operational challenges a set of mechanical freewheels and diodes will have to be placed into the mechanical rotational system and the circuits, respectively. The freewheel, like the one shown in *** CITE FIG Freewheel FROM MS3 ***, will allow powered rotation in one direction and free rotation in the other. The same design is implemented in bicycles and allows the move forward when pedaling forward but not brake or move backwards when pedaling in the opposite direction, also known as freewheeling. The diodes in the circuit allow for current to only travel in one direction. As a safety precaution they will be put in place into the circuit to prevent the back flow of any current should the motors rotate in the direction opposite of their intended use.
 
 \subsubsection{Reel Motor}
+
+\indent\indent The design of the reel motor is driven by the weight of the aeroshell. The aeroshell produces a high torque on the reel. To reel it up the motor must be able to meet this requirement. For previously discussed reasons a brushless DC motor was chosen. At peak efficiency these motors operate at a high rpm. Since this application requires torque over rpm gearing down is necessary. This is achieved through a worm drive gear reducer. The reducer chosen has a gear ratio of 20:1. The high rpm input of the motor is turned into a slower rpm, but higher torque output from the gear reducer. The gear reducer has a maximum torque output of $371.5 Nm$. A freewheel bearing will be used to prevent the shaft from transmitting power during release of the aeroshell.
 
 \subsubsection{Release Motor}
 
@@ -1295,7 +1346,7 @@ These calculations provides us with confidence that our design will be robust en
 
 \indent\indent The reel motor is responsible for returning the aeroshell back to the platform within a reasonable amount of time. Driving the design of the reel motor is the high torque required to lift the aeroshell. A roller attached to the platform will feed the tether back to the reel and eliminate variable torque as the tether is spooled.
 
-\indent\indent Motors generally operate at a high rpm at peak efficiency. For this high torque application the rpm of the motor will need to be decreased while the torque output increases proportionally. This is achieved with a 20:1 worm gear reducer shown in (Insert figure here). This multiplies the torque output by a factor of twenty.
+\indent\indent Motors generally operate at a high rpm at peak efficiency. For this high torque application the rpm of the motor will need to be decreased while the torque output increases proportionally. This is achieved with a worm gear reducer. This multiplies the torque output by a factor of twenty. Maximum output for the gear reducer is $371.5 Nm$. This is more than enough power to lift the aeroshell. If any future projects need more torque the gear reducer will still hold up. A freewheel bearing attached to the shaft will ensure power is transmitted only while reeling up. The bearing can rotate freely during release. While reeling up the bearing catches on a mechanism and transmits power.
 
 \subsubsection{Release Motor} \label{ReleaseMotorDesignAnalysis}
 
@@ -1408,7 +1459,7 @@ The master cylinder, which holds the brake fluid, is attached to the base plate 
 
 The forces on the mounting hardware was also considered when designing the components. The bolts used have a 12.9 class shear strength which equates to around 732 MPa. When calculating the maximum force, it was found that at the maximum force of 8,898 N, the shear stress experienced per bolt would be 19.6 MPa. This gives a safety factor of 37 when considering the shear force on the bolts used. The material used for these mounts was 7075 aluminum which is rated for 500 MPa yield strength which exceeds some steels. With the rated yield strength, the 7075 aluminum mounts will have no problem handling the forces required.
 
-This iteration of the design does not include an electromagnetic system due to the ....?
+
 
 % ---------------------------------------------------------
 
@@ -1459,6 +1510,8 @@ All CAD drawings may be found in the Milestone 6 Final Report Data Packet found 
 
 \subsubsection{Reel Motor}
 
+The final design of the reel motor subsystem consists of the motor, gear reducer, and transmission system. An Ampflow A28-400 BLDC motor was used in conjunction with a worm gear reducer to achieve the desired torque necessary to lift the aeroshell. The previous team used Ampflow motors with success for reeling up the aeroshell. The gear reducer was a new addition since the torque requirement is much higher in this iteration. The motor's 1/2" output shaft connects to a step up shaft adapter in order to fit into the 7/8" bore of the gear reducer. A sprocket is fitted to the output shaft of the gear reducer. Another sprocket is mounted over a freewheel bearing on the shaft. The bearing ensures power transmission only while the aeroshell is being reeled up. A size 80 heavy roller chain connects the gear reducer to the shaft.
+
 \subsubsection{Release Motor}
 
 The transmission system for the release motor was developed from a basic pulley system. The design incorporates an A-size V-belt, which are commonly used for medium to high speeds. The v-belt shape was chosen for its simplicity, acceptable operating conditions and low weight. Longer drop times will require higher RPMs and a more complex gear and timing belt system would be necessary, but since this system will only be applied to the 2-second drop time the materials chosen are sufficient. The release motor will drive a 2" diameter pulley directly mounted to the motor shaft. The pulley is then connected to a 6" diameter spoked cast iron pulley via a 29" long v-belt. 
@@ -1499,16 +1552,95 @@ The release motor requires a 48 VDC power supply capable of supplying a peak cur
 
 There have been improvements to the aeroshell from the previous iterations work. This includes a new airfoil design that makes the aeroshell shorter in length, less drag, and lighter to help the mass budget. Connecting the tether to the aeroshell subsystem has been changed due to the addition of an internal structure that will distribute majority of the braking force. The addition of the internal structure creates a housing unit for the middeck locker or payload to secure it within the aeroshell.
 
+\indent\indent The aeroshell subsystem is comprised of two major structures. The first component is the aeroshell itself. The aeroshell structure is a modified airfoil geometry designed to be aerodynamically efficient and maintain a low drag coefficient. It will be made out of carbon fiber in order to withstand the environment, yet be light and portable. The second component is the internal structure which is found within the aeroshell. This component acts as a skeleton of the subsystem, designed to organize all the internal items including the middeck locker which will house the microgravity experiment. It is critical that these components do not fail during the mission, as they house the most important part of the project.
+
+The risk assessment for the aeroshell subsystem is very important, because if the subsystem fails then the whole mission fails. The team has taken into account all the potential failure modes that the subsystem could encounter during its mission. The team has worked hard to ensure the success and safety of the project in designing the aeroshell subsystem. Selecting the adequate material, running accurate simulations, and refining the manufacturing method are all part of the team effort to mitigate all potential failure modes. In this section, the specific details of each failure mode will be addressed and resolutions will be proposed. 
+
+
+\subsubsection{Aeroshell Structure}
+\indent\indent The aeroshell structure will be manufactured using a mold that the team will create. This will ensure that the team is able to make the structure exactly as designed. The structure will be made out of carbon fiber and will be bolted together on one side. The key is to be able to open and close the aeroshell between missions. Its main purpose is to serve as a casing to the internal structure.  
+\begin{table}[H]
+\caption{\label{tab:aeroshell_strucure} Aeroshell Structure Failure Modes \& Probabilities}
+\centering
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll>{\columncolor{gray!10}}c>{\columncolor{gray!20}}c>{\columncolor{gray!30}}c>{\columncolor{gray!40}}c>{\columncolor{gray!50}}c}
+\toprule
+\textbf{Component} & \textbf{Mode of Failure} & \multicolumn{5}{c}{\textbf{Probability}} \\
+\cmidrule{3-7}
+    &   & Very unlikely & Slightly possible & Possible & Fairly possible & Highly possible \\
+\midrule
+Aeroshell Structure & Catastrophic Failure  &\xmark       &       &       &       &       \\
+\cmidrule{3-7} %\addlinespace
+                    & Unexpected Vibrations &       &\xmark &       &       &       \\
+
+\cmidrule{3-7}
+                    & Improper Assembly     &\xmark &       &       &       &       \\
+
+\bottomrule
+\end{tabular}}
+\end{table}
+\subsubsection*{Aeroshell Structure}
+\indent\indent In the incident that the structure experiences catastrophic failure, it would put anyone involved with the experiment at risk. This means that the aeroshell would fail if the design of the structure could not withstand the forces of a high altitude drop. The failure mode is very unlikely due to the aerodynamic design of the structure. This will cause the aeroshell to drop smoothly and experience low drag. This has been verified by the accurate ANSYS CFD simulations that have been performed on the aeroshell. To mitigate this risk, the team will perform a drop test of the completed aeroshell to ensure it can travel smoothly. Another possibility of total destruction is if the material chosen is not strong enough to withstand the drop. A way to mitigate this risk is by choosing the right material for the mold. Carbon fiber was chosen as the material because of it's high resistance to destruction and deformation.
+
+The structure could be subject to unexpected vibrations on its time traveling downward. These vibrations could be a result of crosswinds that interfere with the linear movement of the aeroshell. This could cause a failure in the aeroshell if the vibrations are too strong for the structure to handle. The possibility of this happening is slight. The team has chosen to mitigate this risk by choosing to create the aeroshell out of carbon fiber. Light, yet durable, carbon fiber is an excellent material to withstand this potential risk. In order to prove this, the team has run a vibrational analysis on ANSYS and have yielded positive results.
+
+The last failure mode feasible for the aeroshell structure would be the improper assembly of the structure. The possibility of this happening is very unlikely. The team has spent the past few months familiarizing themselves with the best manufacturing techniques for carbon fiber molds. An error in the manufacturing is very unlikely, and if one occur ed the team would not move on with a faulty product. Once completed, the team will bolt down the open side and make sure it is sealed. A way to mitigate this failure mode is to have more than one team member inspect the structure before the mission. This is to ensure the aeroshell has been assembled properly.
+% ---------------------------------------------------------
+
+\subsubsection{Internal Structure}
+\indent\indent The internal structure of the aeroshell will be made of 8020 Aluminum beams. It will have four eye-nut bolts on the top surface which will lead to a hook. The hook will be connected to the tether which leads to the TUMBR subsystem. The triumph of this connection point is critical for mission success. 
+\begin{table}[H]
+\caption{\label{tab:internal_structure} Internal Structure Failure Modes \& Probabilities}
+\centering
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll>{\columncolor{gray!10}}c>{\columncolor{gray!20}}c>{\columncolor{gray!30}}c>{\columncolor{gray!40}}c>{\columncolor{gray!50}}c}
+\toprule
+\textbf{Component} & \textbf{Mode of Failure} & \multicolumn{5}{c}{\textbf{Probability}} \\
+\cmidrule{3-7}
+    &   & Very unlikely & Slightly possible & Possible & Fairly possible & Highly possible \\
+\midrule
+Internal Structure  & Structural Failure     &      &       &\xmark       &       &       \\
+\cmidrule{3-7} %\addlinespace
+                    & Unexpected Vibrations     &\xmark       &      & &       &       \\
+\cmidrule{3-7}
+                    & Payload Failure           &\xmark       &       &       &       &       \\
+\cmidrule{3-7}
+                    & Improper Assembly         &\xmark &       &       &       &       \\
+
+\midrule
+Tether Connection   & Structural Failure        &       &       & &\xmark       &       \\
+\cmidrule{3-7}
+                    & Fatigue Failure         & &       & \xmark      &       &       \\
+
+\bottomrule
+\end{tabular}}
+\end{table}
+\subsubsection*{Internal Structure}
+\indent\indent The structural failure of the internal structure would be a direct result of the loads it will experience during the braking and reeling process. The probability of this occurring over time is possible, but not fairly possible since the material chosen for the internal structure is durable. The team has chosen to mitigate this risk by performing FEA analysis on the main 8020 beams expected to handle the heavy loads. The team will also conduct tests to ensure the strength and durability of the internal structure once it is manufactured. The team will also have to routinely expect the internal structure to ensure it has not started to succumbed to any of the forces it has experienced. 
+
+The same failure mode of unexpected vibrations that applies to the aeroshell also applies to the internal structure. The main difference is that the probability of failure decreases in the internal structure. If any unexpected vibrations where to occur, the outer structure would absorb most of the vibrations and the ones the internal structure would feel would be damped down. A way the team can mitigate, besides the vibrational analysis, is to physically test the internal structure to see how it reacts under these type of conditions.
+
+Payload failure of the internal structure has a very unlikely risk. It would be very difficulty for a payload failure to occur since the internal structure has been designed to fit the middeck locker nice and snug. This means that it will not have room to move around and the possibility of it failing in that manner is nearly impossible. It will also be strapped in securely. A way the team could mitigate this risk would be by ensuring that the payload is secured before every trial. The other way a payload could fail would have to do with aeroshell controls which will be discussed in the next section. 
+
+Lastly, the improper assembly of the aeroshell would cause failure. The event of this occurring is also very unlikely since the team will be mindful and careful when manufacturing this important component. The best way to mitigate this failure mode is to have several team members inspect the internal structure before the aeroshell is clasped around it. 
+
+\subsubsection*{Tether Connection}
+\indent\indent The biggest worry that the internal structure has is the tether connection. The highest possibility of failure in the entire aeroshell subsystem is found in the tether connection. Structural failure at this point is fairly possible. This is because of the heavy loads that this connection point is experiencing it. If the load is too much for the connection to handle, the aeroshell and internal structure would come flying down with no way to stop it. There are two ways to mitigate this. First, the team will run FEA simulations on ANSYS, specifically on the mounting points, to ensure that they can handle the expected loads. Secondly, the team will physically test the mounting points by attaching heavy loads to it and dropping them a certain distance. This will ensure the strength and reliance of the mounting point. 
+
+Another important failure mode to account for is fatigue failure. This failure mode is a real possibility. After several drops, the bolts that make up the mounting point might begin to wear down or even come loose. A loose eye-bolts could create a fatigue failure and the result would be catastrophic. The best way to mitigate this risk is to have the eye-bolts checked regularly between drops, and tightened if required. If the bolt is showing signs of fatigue, a replacement must be ordered immediately. With regular inspection, the risk probability does not loom large. 
+
+% ---------------------------------------------------------
+
 \subsection{TUMBR}
 
 \indent\indent The TUMBR unit was not completed and fully integrated in time for the conclusion of Senior Design 2. From the Milestone 5 documentation our group had plans for thorough and comprehensive testing to demonstrate system capabilities. Despite not having a system in it's fully integrated and functional state, we were still able to evaluate several concepts and subsystems.
 
 
-One of the main concerns about the braking system was that the rotor would not be welded on perfectly on the vertical axis causing unwanted braking during certain parts of shaft rotation. This unwanted braking would have put a larger torque requirement onto the motors which would cause the system to fail. Notches were created in the shaft to prevent the rotor from being mounted off axis. This combined with a modular and adjustable mount, ensured that the braking system would not encounter this problem. The caliper and master cylinder were tested when first assembled and work as expected. When the master cylinder bore was pushed in, the brake caliper pistons would squeeze towards each other. The linear actuator which would be used to push the bore of the master cylinder was also tested. The use of a circuit board and raspberry pi ensured that we could use the optical encoder to control how far the linear actuator pushed out. Both the caliper and linear actuator were tested individually and proven to work, however the integration of the two was not tested. This was due to bad luck, as the SD card which had the code to control the brakes had snapped and the code was lost. However, both systems of the brakes were mounted to the platform and are ready to be tested together. 
+One of the main concerns about the braking system was that the rotor would not be welded on perfectly on the vertical axis causing unwanted braking during certain parts of shaft rotation. This unwanted braking would have put a larger torque requirement onto the motors which would cause the system to fail. Notches were created in the shaft to prevent the rotor from being mounted off axis. This combined with a modular and adjustable mount, ensured that the braking system would not encounter this problem. The caliper and master cylinder were tested when first assembled and work as expected. When the master cylinder bore was pushed in, the brake caliper pistons would squeeze towards each other. Both the caliper and linear actuator were tested individually and proven to work, however the integration of the two was not tested. This was due to bad luck, as the SD card which had the code to control the brakes had snapped and the code was lost. However, both systems of the brakes were mounted to the platform and are ready to be tested together. 
 
-*** WRITE STUFF ABOUT MOTOR CONTROLLER AND BRAKE ACTUATOR TESTING ***
-
-As for the motor controller, the team was able to integrate the motor controller provided by VEX Robotics with a PID controller and an optical rotary encoder to adequately change the speed of the release motor. However, due to the lack of a testing facility, no testing was performed on the integrated system. Nonetheless, a proof-of-concept testing was done in the lab that consisted of rotating the release disks by hand to demonstrate that the code provided by the CS team for the motor control was fully functional and operational. In addition to the motor controller, testing was done on the linear actuator responsible for applying the brakes. The CS team was able to demonstrate their capability to fully extend and retract the actuator in accordance to the desired drop time. In other words, during a drop simulation, the brakes were fully extended while the system was waiting for the drop command, as soon as the drop command was sent the actuator retracted releasing the brakes, and as the desired drop time was reached the actuator was extended again.
+As for the motor controller, the team was able to integrate the motor controller provided by VEX Robotics with a PID controller and an optical rotary encoder to adequately change the speed of the release motor. However, due to the lack of a testing facility, no testing was performed on the integrated system. Nonetheless, a proof-of-concept testing was done in the lab that consisted of rotating the release disks by hand to demonstrate that the code provided by the CS team for the motor control was fully functional and operational. In addition to the motor controller, testing was done on the linear actuator responsible for applying the brakes. The CS team was able to demonstrate their capability to fully extend and retract the actuator in accordance to the desired drop time. In other words, during a drop simulation, the actuator was fully extended while the system was waiting for the drop command, as soon as the drop command was sent the actuator retracted releasing the brakes, and as the desired drop time was reached the actuator was extended again.
 
 \subsubsection{Tether}
 
@@ -1588,49 +1720,6 @@ Catastrophic failure for the drive shaft would result in complete loss of functi
 The roller bearings are located within the housing of the tether guide and make direct contact with the drive shaft. These bearing will eventually wear down over time and result in slipping along the drive shaft. Regular maintenance and repairs can completely mitigate this risk. There is a fair probability of the bearings overheating since they are driven through friction. This could lead to warping and a failure to engage. Inspection and maintenance can mitigate this risk. Catastrophic failure of the bearings could occur if they are put under a very heavy a load. The result would be failure to engage and loss of function of the tether guide. The tether guide was chosen with consideration to the load it would be put under which makes this mode unlikely. Further testing can prove the strength of the bearings and mitigate this risk.
 
 One of the most likely modes of failure is the drive motor overheating. This could be due to heavy loads the motor wasn’t designed to take. An inefficient motor will also overheat due to power not being fully transmitted into torque. Overheating of the motor can lead to stalls or complete loss of functionality. Mitigation of this risk mostly comes down to selection of the motor itself. Selecting the correct motor and designing it to maximize heat transfer away from the motor will ensure overheating does not occur. 
-
-
-% ---------------------------------------------------------
-
-\subsubsection{\label{sss:tumbr_controls} TUMBR Controls}
-
-\indent\indent The TUMBR controls system is identical to the Aeroshell controls system with the minor addition of two components, the motor controller and the brakes controller, and tentatively a rotary encoder to measure the speed at which the tether is being ejected (pending on CS team's ability to integrate the encoder). Therefore, this section will elaborate only on the motor controller and brakes controller failure modes [Table ~\ref{tab:tumbr_controls}]. Please refer to [Table ~\ref{tab:aeroshell_controls}] for the failure modes of the remaining components.
-
-\begin{table}[H]
-\caption{\label{tab:tumbr_controls} TUMBR Controls Failure Modes \& Probabilities}
-\centering
-
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{ll>{\columncolor{gray!10}}c>{\columncolor{gray!20}}c>{\columncolor{gray!30}}c>{\columncolor{gray!40}}c>{\columncolor{gray!50}}c}
-\toprule
-\textbf{Component} & \textbf{Mode of Failure} & \multicolumn{5}{c}{\textbf{Probability}} \\
-\cmidrule{3-7}
-    &   & Very unlikely & Slightly possible & Possible & Fairly possible & Highly possible \\
-\midrule
-Motor Controller    & Failure to Power      &\xmark &       &       &       &       \\
-\cmidrule{3-7}
-                    & Not Enough PWM Pins   &       &       &\xmark &       &       \\
-\cmidrule{3-7}
-                    & Overheating           &       &\xmark &       &       &       \\
-
-\midrule
-Brakes Controller   & Failure to Engage     &       &\xmark &       &       &       \\
-
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\subsubsection*{Motor Controller}
-
-\indent\indent The motor controller is going to control a motor with a voltage requirement of 48V, as such, the controller needs to be able to handle a minimum of 48V. Failure to provide that amount of voltage will hinder the motor's ability to operate at the required RPM and torque. This problem is overcome by powering the system with 4$\times$12V batteries connected in series for a total voltage of 48V.
-
-Furthermore, the motor controller interfaces with the on-board RPi for Pulse Width Modulation (PWM) input to control the amount of voltage and current available to the motor. The problem lies in the fact that the RPi has only one dedicated hardware PWM pin. This might possibly be an issue if the team opts to use the PWM pin for any other purpose. Nevertheless, some workarounds are made available by the RPi community for software implemented PWM and any other General Purpose Input/Output (GPIO) pin could be used.
-
-Lastly, there is the slight concern that the motor controller might overheat, this might lead the motor controller to malfunction or maybe even fry the circuit components. Yet, that is not a standing issue given that the motor controller is fully sealed inside an aluminum heatsink. Moreover, the motor controller won't be placed under load for extended periods of time, thus it won't be generating a great deal of excess heat.
-
-\subsubsection*{Brakes Controller}
-
-\indent\indent The brakes controller consists of an actuator connected to the on-board RPi which applies a voltage difference on the power and ground rails. Failure to engage the brakes will cause the aeroshell to drop out of control. Therefore, this is a possible risk that needs to be considered. One way to ensure that the actuators engage the brakes is to install actuators that are capable of applying more than adequate pressure on the brakes to halt the system.
 
 % ---------------------------------------------------------
 
@@ -1867,6 +1956,12 @@ It was determined that the probability of the batteries short-circuiting is only
 With these failure modes accounted for and the mitigation strategies in place, our group feels confident in the safe and successful integration and operation of the power subsystem into the overall system.
 
 % ---------------------------------------------------------
+
+\subsection{Controls \& Instrumentation}
+
+\input{Controls/controls_sys_eval}
+
+% ---------------------------------------------------------
 % ---------------------------------------------------------
 % ---------------------------------------------------------
 
@@ -1876,7 +1971,7 @@ With these failure modes accounted for and the mitigation strategies in place, o
 
 \indent\indent The aeroshell has been designed better to acheive the ultimate goal of quality microgravity. It is able to be shorter to ease manufacturing, travel faster due to less drag, and weighs less than the previous iterations design. With the addition of a internal structure it has created a better way of attaching the tether to the aeroshell by not utilizing the aeroshell to bare all the braking force it will experience. By having the internal structure, it will create a better housing for the middeck locker or payload and distribute the braking throughout the whole subsystem. The team developed a way to manufacture the aeroshell in-house by using vacuum pressure.
 
-Issues have presented themselves to be challenging throughout the manufacturing process of the aeroshell. There is an issue on the reliability and efficiency of the vacuum pressure method. The method is temperamental and leaks can be hard to find with a large object.
+Issues have presented themselves to be challenging throughout the manufacturing process of the aeroshell. There is an issue on the reliability and efficiency of the vacuum pressure method. The method is temperamental and leaks can be hard to find with a large object. 
 
 There is the issue of the aeroshell reaction to environmental and braking force with the internal structure within. This is due to the processing capability of the computers provided. Simulations could not be completed due to this issue and it is a unknown.
 
@@ -1896,13 +1991,19 @@ The reel system was successfully redesigned to allow for easy machining, welding
 
 The braking system was successfully mount to the unit without hindering any rotation of the shaft while disengaged. This was a large goal of the braking system since, due to poor planning and manufacturing, the previous generation's baking system was not able to rotate the shaft fully without the brake unintentionally paralyzing the rotation. The mounts created for mounting the caliper to the unit were a major success because the brake pads inside the caliper are considered to be consumable products. The mount was designed for easy repair and replacement of all the braking components, while still maintaining the structural integrate and placement of the caliper. The caliper was tested while connected to the master cylinder, and when the bore of the master cylinder was pressed in the caliper would clamp anything in between the brake pads. The optically encoded linear actuator was also tested with success, since it was able to move with great precision while applying the holding force of 400 lbs. In total, each part of the braking system successfully function as intended. However, the need to test all the functions together must still be tested.
 
-*** Successes of controls systems ***
-
 Another key feature that our group delivered was the ability to produce a system that required very little maintenance. Unfortunately, this won't be fully proven until the system is rigorously tested and fully evaluated. However, many of the materials we've selected were designed to have long lifetimes and require very little individual maintenance. Corrosion resistant paints were purchased for the steel components to prevent possible rusting in the UV-intense radiation environment. The release wheels, which are expected to receive a significant amount of wear, are 3D printed with a high infill percentage (for strength) and are therefore easily replaced. The aluminum components were all theoretically calculated to experience very little deformations and therefore experience little fatigue over the system's lifetime. The release motors have short duty cycles, which prevents wear on the motor and overheating. The model of the lead-acid batteries were selected to requirement no maintenance whatsoever of the course of their lifetime. The tether was selected to have a high resistance to abrasion and radiation, thus extending its operation lifetime. 
 
 Some parts, such as the brake pads and release wheels are designed to wear with time and eventually be replaced. Further instructions detailing the maintenance of these components is communicated later in the Appendix of the report in Other Manuals and Documentation. 
 
 With all previous accomplishments considered, the entire design and product our group is producing has an estimated mass of about 300 kg, which is 100 kg less than ultimate mass budget of 400 kg outlined in our initial design requirements. While it may be difficult to source OTS components to build systems that are further scaled-up to accommodate longer drop times, there is plenty of mass budget left to allow for larger and more robust parts and components. 
+
+% ---------------------------------------------------------
+
+\subsection{Controls \& Instrumentation}
+
+\input{Controls/controls_accomplishments}
+
+% ---------------------------------------------------------
 
 % ---------------------------------------------------------
 % ---------------------------------------------------------
@@ -1942,253 +2043,13 @@ The proper alternative to this would've been to purchase a lower-quality materia
 
 Technically speaking, the braking system our team developed was intentionally meant to not accommodate for anything more than a two-second drop. This was communicated early on in the project and thus, the advanced braking system was born. Knowledge has been transferred to this team but to summarize, our team found that frictional brakes were totally unfeasible for the dynamics of the system and forces we expected to encounter. In particular, the shaft that the rotor would be mounted to is expected to spin at a maximum of approximately 6,000 rpm. The highest quality ceramic brakes used on formula-one race cars are only able to accommodate speeds of up to 2,500 rpm. Therefore, a more technologically advanced braking system- such as electromagnetic braking or air braking- needed to be developed. The development for this subsystem is constrained by the geometry, dynamics, and forces of our system but otherwise allows for open-sky designing. 
 
-\section{Risk Assessment and Mitigation}
-
-\indent\indent With any system there are a plethora of associated risks, some of which may not be realized until it is too late and a critical failure occurs. Knowing this, engineers and others associated with the development of a system take time to breakdown and evaluate it on a component-level, analyzing the parts independently, as subsystems and as a complete, functioning system. To do this effectively, failure modes are recognized and their cause becomes known. Depending on the probability and severity of the failure, an appropriate mitigation is integrated. The importance of risk assessment is not only for a fully functional system, but also for all those who could be put as risk if there were a failure to take place.
-
 % ---------------------------------------------------------
 
-\subsection{Aeroshell}
+\subsection{Controls \& Instrumentation}
 
-\indent\indent The aeroshell subsystem is comprised of two major structures. The first component is the aeroshell itself. The aeroshell structure is a modified airfoil geometry designed to be aerodynamically efficient and maintain a low drag coefficient. It will be made out of carbon fiber in order to withstand the environment, yet be light and portable. The second component is the internal structure which is found within the aeroshell. This component acts as a skeleton of the subsystem, designed to organize all the internal items including the middeck locker which will house the microgravity experiment. It is critical that these components do not fail during the mission, as they house the most important part of the project.
-
-The risk assessment for the aeroshell subsystem is very important, because if the subsystem fails then the whole mission fails. The team has taken into account all the potential failure modes that the subsystem could encounter during its mission. The team has worked hard to ensure the success and safety of the project in designing the aeroshell subsystem. Selecting the adequate material, running accurate simulations, and refining the manufacturing method are all part of the team effort to mitigate all potential failure modes. In this section, the specific details of each failure mode will be addressed and resolutions will be proposed. 
-
-
-\subsubsection{Aeroshell}
-\indent\indent The aeroshell structure will be manufactured using a mold that the team will create. This will ensure that the team is able to make the structure exactly as designed. The structure will be made out of carbon fiber and will be bolted together on one side. The key is to be able to open and close the aeroshell between missions. Its main purpose is to serve as a casing to the internal structure.  
-\begin{table}[H]
-\caption{\label{tab:aeroshell_strucure} Aeroshell Structure Failure Modes \& Probabilities}
-\centering
-
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{ll>{\columncolor{gray!10}}c>{\columncolor{gray!20}}c>{\columncolor{gray!30}}c>{\columncolor{gray!40}}c>{\columncolor{gray!50}}c}
-\toprule
-\textbf{Component} & \textbf{Mode of Failure} & \multicolumn{5}{c}{\textbf{Probability}} \\
-\cmidrule{3-7}
-    &   & Very unlikely & Slightly possible & Possible & Fairly possible & Highly possible \\
-\midrule
-Aeroshell Structure & Catastrophic Failure  &\xmark       &       &       &       &       \\
-\cmidrule{3-7} %\addlinespace
-                    & Unexpected Vibrations &       &\xmark &       &       &       \\
-
-\cmidrule{3-7}
-                    & Improper Assembly     &\xmark &       &       &       &       \\
-
-\bottomrule
-\end{tabular}}
-\end{table}
-\subsubsection*{Aeroshell Structure}
-\indent\indent In the incident that the structure experiences catastrophic failure, it would put anyone involved with the experiment at risk. This means that the aeroshell would fail if the design of the structure could not withstand the forces of a high altitude drop. The failure mode is very unlikely due to the aerodynamic design of the structure. This will cause the aeroshell to drop smoothly and experience low drag. This has been verified by the accurate ANSYS CFD simulations that have been performed on the aeroshell. To mitigate this risk, the team will perform a drop test of the completed aeroshell to ensure it can travel smoothly. Another possibility of total destruction is if the material chosen is not strong enough to withstand the drop. A way to mitigate this risk is by choosing the right material for the mold. Carbon fiber was chosen as the material because of it's high resistance to destruction and deformation.
-
-The structure could be subject to unexpected vibrations on its time traveling downward. These vibrations could be a result of crosswinds that interfere with the linear movement of the aeroshell. This could cause a failure in the aeroshell if the vibrations are too strong for the structure to handle. The possibility of this happening is slight. The team has chosen to mitigate this risk by choosing to create the aeroshell out of carbon fiber. Light, yet durable, carbon fiber is an excellent material to withstand this potential risk. In order to prove this, the team has run a vibrational analysis on ANSYS and have yielded positive results.
-
-The last failure mode feasible for the aeroshell structure would be the improper assembly of the structure. The possibility of this happening is very unlikely. The team has spent the past few months familiarizing themselves with the best manufacturing techniques for carbon fiber molds. An error in the manufacturing is very unlikely, and if one occur ed the team would not move on with a faulty product. Once completed, the team will bolt down the open side and make sure it is sealed. A way to mitigate this failure mode is to have more than one team member inspect the structure before the mission. This is to ensure the aeroshell has been assembled properly.
-% ---------------------------------------------------------
-
-\subsubsection{Internal Structure}
-\indent\indent The internal structure of the aeroshell will be made of 8020 Aluminum beams. It will have four eye-nut bolts on the top surface which will lead to a hook. The hook will be connected to the tether which leads to the TUMBR subsystem. The triumph of this connection point is critical for mission success. 
-\begin{table}[H]
-\caption{\label{tab:internal_structure} Internal Structure Failure Modes \& Probabilities}
-\centering
-
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{ll>{\columncolor{gray!10}}c>{\columncolor{gray!20}}c>{\columncolor{gray!30}}c>{\columncolor{gray!40}}c>{\columncolor{gray!50}}c}
-\toprule
-\textbf{Component} & \textbf{Mode of Failure} & \multicolumn{5}{c}{\textbf{Probability}} \\
-\cmidrule{3-7}
-    &   & Very unlikely & Slightly possible & Possible & Fairly possible & Highly possible \\
-\midrule
-Internal Structure  & Structural Failure     &      &       &\xmark       &       &       \\
-\cmidrule{3-7} %\addlinespace
-                    & Unexpected Vibrations     &\xmark       &      & &       &       \\
-\cmidrule{3-7}
-                    & Payload Failure           &\xmark       &       &       &       &       \\
-\cmidrule{3-7}
-                    & Improper Assembly         &\xmark &       &       &       &       \\
-
-\midrule
-Tether Connection   & Structural Failure        &       &       & &\xmark       &       \\
-\cmidrule{3-7}
-                    & Fatigue Failure         & &       & \xmark      &       &       \\
-
-\bottomrule
-\end{tabular}}
-\end{table}
-\subsubsection*{Internal Structure}
-\indent\indent The structural failure of the internal structure would be a direct result of the loads it will experience during the braking and reeling process. The probability of this occurring over time is possible, but not fairly possible since the material chosen for the internal structure is durable. The team has chosen to mitigate this risk by performing FEA analysis on the main 8020 beams expected to handle the heavy loads. The team will also conduct tests to ensure the strength and durability of the internal structure once it is manufactured. The team will also have to routinely expect the internal structure to ensure it has not started to succumbed to any of the forces it has experienced. 
-
-The same failure mode of unexpected vibrations that applies to the aeroshell also applies to the internal structure. The main difference is that the probability of failure decreases in the internal structure. If any unexpected vibrations where to occur, the outer structure would absorb most of the vibrations and the ones the internal structure would feel would be damped down. A way the team can mitigate, besides the vibrational analysis, is to physically test the internal structure to see how it reacts under these type of conditions.
-
-Payload failure of the internal structure has a very unlikely risk. It would be very difficulty for a payload failure to occur since the internal structure has been designed to fit the middeck locker nice and snug. This means that it will not have room to move around and the possibility of it failing in that manner is nearly impossible. It will also be strapped in securely. A way the team could mitigate this risk would be by ensuring that the payload is secured before every trial. The other way a payload could fail would have to do with aeroshell controls which will be discussed in the next section. 
-
-Lastly, the improper assembly of the aeroshell would cause failure. The event of this occurring is also very unlikely since the team will be mindful and careful when manufacturing this important component. The best way to mitigate this failure mode is to have several team members inspect the internal structure before the aeroshell is clasped around it. 
-
-\subsubsection*{Tether Connection}
-\indent\indent The biggest worry that the internal structure has is the tether connection. The highest possibility of failure in the entire aeroshell subsystem is found in the tether connection. Structural failure at this point is fairly possible. This is because of the heavy loads that this connection point is experiencing it. If the load is too much for the connection to handle, the aeroshell and internal structure would come flying down with no way to stop it. There are two ways to mitigate this. First, the team will run FEA simulations on ANSYS, specifically on the mounting points, to ensure that they can handle the expected loads. Secondly, the team will physically test the mounting points by attaching heavy loads to it and dropping them a certain distance. This will ensure the strength and reliance of the mounting point. 
-
-Another important failure mode to account for is fatigue failure. This failure mode is a real possibility. After several drops, the bolts that make up the mounting point might begin to wear down or even come loose. A loose eye-bolts could create a fatigue failure and the result would be catastrophic. The best way to mitigate this risk is to have the eye-bolts checked regularly between drops, and tightened if required. If the bolt is showing signs of fatigue, a replacement must be ordered immediately. With regular inspection, the risk probability does not loom large. 
+\input{Controls/controls_recommendations}
 
 % ---------------------------------------------------------
-
-\subsubsection{\label{sss:aeroshell_controls} Aeroshell Controls}
-
-\indent\indent The aeroshell controls consist of a dedicated embedded system, namely a Raspberry Pi (RPi) model 3B, that will be used to communicate with the sensors and log their data in addition to performing any logic control that might be required. The sensors consist of an inertial measurement unit (IMU), a temperature sensor, a pressure transducer, and a humidity sensor. The sensors will be used to record environmental conditions at which the experiment is being conducted. Lastly, a radio modem will be used to communicate, and transmit collected data, with the RPi installed on the platform. [Table ~\ref{tab:aeroshell_controls}] lists the possible failure modes of each component along with its probability. The probabilities were assumed based on prior experience and educated guesses.
-
-\begin{table}[H]
-\caption{\label{tab:aeroshell_controls} Aeroshell Controls Failure Modes \& Probabilities}
-\centering
-
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{ll>{\columncolor{gray!10}}c>{\columncolor{gray!20}}c>{\columncolor{gray!30}}c>{\columncolor{gray!40}}c>{\columncolor{gray!50}}c}
-\toprule
-\textbf{Component} & \textbf{Mode of Failure} & \multicolumn{5}{c}{\textbf{Probability}} \\
-\cmidrule{3-7}
-    &   & Very unlikely & Slightly possible & Possible & Fairly possible & Highly possible \\
-\midrule
-Power Supply Unit   & Failure to Deliver Power  &\xmark &       &       &       &       \\
-\cmidrule{3-7}
-                    & Improper Connections      &       &\xmark &       &       &       \\
-\cmidrule{3-7}
-                    & Overheating               &\xmark &       &       &       &       \\
-
-\midrule
-RPi                 & Overheating               &       &\xmark &       &       &       \\
-\cmidrule{3-7}
-                    & Inoperable Temperatures   &       &       &       &\xmark &       \\
-\cmidrule{3-7}
-                    & Failure to Record Data    &       &\xmark &       &       &       \\
-
-\midrule
-Sensors             & Buggy Software            &       &\xmark &       &       &       \\
-\cmidrule{3-7}
-                    & Poor Calibration          &\xmark &       &       &       &       \\
-
-\midrule
-Radio Transmission  & Loss of Signal            &       &       &\xmark &       &       \\
-\cmidrule{3-7}
-                    & Improper Assembly         &       &\xmark &       &       &       \\
-\cmidrule{3-7}
-                    & Corrupt Data Transmission &       &\xmark &       &       &       \\
-
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\subsubsection*{Power Supply Unit}
-
-\indent\indent The power supply unit (PSU) is one of the most vital components since without it nothing is capable of functioning. It is important to chose an adequate PSU that is capable of delivering the required wattage for the RPi and the peripherals to work. The effects of the PSU's failure to deliver are twofold.
-
-\begin{enumerate}
-    \item Not enough power is delivered to power the system, this would render the experiment unmonitored and as such no data is recorded.
-    \item Just enough power is delivered to power the system. However, as the system is placed under load and starts drawing more power, the PSU would fail and the system would crash and data would be lost. If the system underwent frequent cycles of power loss, irreversible damage to the hardware might occur.
-\end{enumerate}
-
-Mitigating this risk is rather simple. First and foremost, a suitable PSU with ample amperage and voltage must be picked. Second, a check on the PSU capacity is to be performed after every flight to determine if swapping out the PSU is required.
-
-Furthermore, creating connections between the PSU and the remainder of the aeroshell's controls system can be problematic if not done properly. For instance, if the wires were not properly insulated and they made contact, the circuit could be shorted, it could even cause fire. Improper connections could be circumvented by soldering the connections where applicable, installing heat shrinks, and properly grounding the circuit.
-
-Lastly, having the PSU overheat is very unlikely to happen given that the aeroshell's controls system draws very little current and won't put the PSU under load. However, if it did happen the PSU might explode.
-
-\subsubsection*{Raspberry Pi}
-
-\indent\indent The lack of air at such high altitudes hinders the ability of the RPi to convect heat which would lead to the RPi overheating, which in turn would cause it to malfunction and stop responding. This problem could be attenuated by placing heatsinks on the RPi. However, this is not a problem of huge implications given that at the projected operating altitude, the system is going to be at fairly cold temperatures, which leads to the next topic of discussion.
-
-The controls system is most likely to experience cold temperatures that are not within the range of operation specified by the manufacturer. This would cause the RPi to freeze and seize operating or it simply might ruin the crystal oscillator producing incorrect timings, which would cause problems on the I$^2$C bus effectively losing communication with the sensors.
-One proposed approach was to overclock the RPi and run it on high-performance mode, this would cause the RPi to generate heat to offset the surrounding cold temperature. Another approach was to use the temperature sensors to monitor the ambient temperature at which the RPi is operating and using that information to appropriately scale the overclock value depending on the current temperature readings.
-
-Lastly, the RPi might not be able to record data for various reasons such as, but not limited to, not enough storage space or misconfigured logging procedure. This is very unlikely to happen as the logs are in the kilobyte size range since the data is stored in plain text. One way to mitigate this risk is to choose a large enough SD card and to perform regular health checks on its integrity to determine if it needs to be swapped given that SD cards have limited, albeit long, write cycles.
-
-\subsubsection*{Sensors}
-
-\indent\indent The sensors used on the control system do not have any libraries that are written and implemented for use with embedded systems such as the RPi, as such, existing libraries in other programming languages had to be ported into C and modified to run on the RPi. Improper porting could lead to erroneous registry configuration and write/read operations. Luckily, the CS team is experienced enough and up to the task. Buggy software could be mitigated by debugging the libraries and comparing the output produced by the ported libraries to the original libraries.
-
-In addition, the sensors require proper calibration. Failure to do so would generate noisy and erroneous data. This could be resolved by placing hardware filters on the power lines such as a capacitor to smooth out sudden spikes in power and reduce noise. Likewise, software calibration and data smoothing could be easily implemented. Note that most libraries do provide a built-in calibration routine.
-
-\subsubsection*{Radio Transmission}
-
-\indent\indent Telemetry is a very important aspect in the project as it allows the aeroshell, the platform, and the ground control all to communicate with one another. A loss in signal is possible to occur given the altitude the platform is going to operate at. If signal is lost, the platform and aeroshell are blind to one another and to the ground control, this will cause the system not receive any commands issued from the ground control, thus only relying on the set of commands and algorithms found on the on-board RPi. One way to overcome this problem is to choose an appropriate radio modem with enough coverage over a broad range and to have a clear line-of-sight between sending and receiving ends.
-
-One other problem that is to be anticipated is data corruption through transmission. This could be resolved by establishing a thorough communication protocol with a Start of Heading (SOH) byte, a delimiter if needed, and an End of Transmission (EOT) byte. If the data is not within this predetermined and expected format, then the data got corrupt during transmission and can be disregarded. Additionally, redundancy measures are implemented such as creating and keeping local copies of all the collected data and logs produced.
-
-% ---------------------------------------------------------
-
-
-
-% ---------------------------------------------------------
-% ---------------------------------------------------------
-% ---------------------------------------------------------
-% ---------------------------------------------------------
-
-\section{Modeling and Analysis}
-
-\indent\indent Not all systems require a complete and final design before manufacturing takes place, but once that key milestone begins it can become rather costly to make changes to the previous design. Cost is the key constraint driving the development of a system/project, so as a means of preventing major changes and reducing overall cost most teams choose to hold design reviews to lock in those models and continue on to manufacturing. Necessary materials include 3D models, accurately dimensioned drawings, load analyses, schematics and possibly physical prototypes. To properly show these results the appropriate parameters and conditions must be recognized and applied, otherwise the outcome will not correctly represent the performance of the system. Some hand calculations must also be performed in addition to all computer analysis to confirm accuracy of boundary conditions and constraints.
-
-% ---------------------------------------------------------
-
-\subsection{TUMBR}
-
-\indent\indent The TUMBR system was modeled in the student version of Solidworks 2018 (?). The subsystem can be divided into 8 separate systems, all of which have been analyzed and described below. While Solidworks is a nationally recognized software for 3D modeling, industry does not willingly recognize it's ability to analyze the performance or structural integrity of a system, so the software ANSYS was used to perform all loads analyses. Conditions and constraints included are the environment (and corresponding suitable materials), allowable weight, required RPM, and allowable power input. Note these models and analyses were developed and performed after initial screening from data spec sheets, material property charts and other eliminating factors.
-
-% ---------------------------------------------------------
-
-
-
-% ---------------------------------------------------------
-
-\subsubsection{Tether Guide}
-
-\indent\indent The tether guide will ensure the tether is evenly wrapped back onto the spool after each drop. The guide consists of several components including the bearing housing, drive shaft, drive motor, and mounting structure. The motor is connected to the shaft with a belt to rotate it. The roller bearings are then pressed up against the rotating shaft to create friction and move the housing along the shaft. On the housing a mechanical switch is flipped when it reaches adjustable bolts connected to the mounting structure. This flips the direction of the bearings and switches the direction of movement. The tether guide and mount are connected to the platform between the reel and release disks. The motor will be mounted to the platform between the reel and the guide. CAD modeling of the subsystem shows how everything is mounted and makes it easier to visualize the goal of each component.
-
-\indent\indent Relevant parameters were determined using engineering principles including dynamics, solid mechanics, and machine design. Parameters for this subsystem include the shaft rotation speed, tether guide traverse speed, motor torque required, and drive power. The rotation of the reel drives the speed at which the tether guide needs to move along the drive shaft. This speed was calculated to be $0.0773 m/s$. In order to achieve this speed, the drive shaft will need to rotate at $91.625 rpm$. The torque the motor needs to produce is $7.3 Nm$ and needs to have the capability to output $0.161 kW$ of power. These values will be confirmed during testing. Since everything relies so heavily on the rotation of the reel, depending on the final speed the reel will rotate at the other values for the tether guide can be modified accordingly. 
-
-
-% ---------------------------------------------------------
-
-\subsubsection{TUMBR Controls}
-
-\indent\indent As have been previously mentioned \ref{sss:tumbr_controls}, the controls system of the TUMBR is identical to that of the aeroshell and thus the analysis done was the same for both subsystems. However, the TUMBR has an addition controller for the motor and another for the actuator that interfaces with the brakes.
-Research was done in regards to controlling the motor and multiple ideas were proposed. The first idea was to use the RPi in conjunction with a NPN transistor and a $48V$ power supply to control the motor as seen in the schematic below [Fig. ~\ref{fig:rpi_npn_motor}],
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Controls/rpi_npn_motor_schem.png}
-  \caption{\label{fig:rpi_npn_motor} RPi + NPN Transistor Controller}
-\end{figure}
-
-This idea was later abandoned since none of the team members had experience with high voltage lines and feared that system might fail under load. To this effect, the team members in charge of the motor had contacted the motor's manufacturer to inquire about any controllers that might be provided by them. The sales engineer had suggested the VEX Victor BB High-Voltage Controller as it was designed for high voltage motors in mind and had a built-in calibration tool in addition to being enclosed inside an aluminum chassis, effectively making the entire body of the controller a heatsink.
-
-In regards to the actuator, it was calculated that the actuator needed to be able at minimum to apply force to the master cylinder that is equivalent to the amount of force an average automotive driver applies to the braking pedal. Taking a safety factor into consideration, an actuator with a force of $400lbs$ was chosen.
-
-% ---------------------------------------------------------
-
-
-% ---------------------------------------------------------
-
-
-
-% ---------------------------------------------------------
-
-\subsubsection{Reel Motor}
-
-\indent\indent The reel motor will provide the torque required to reel up the aeroshell after each drop. The motor is mounted to the platform and directly connected to a worm drive gear reducer. The output shaft of the gear reducer has a sprocket on it that uses a chain to connect to a freewheel on the reel shaft. The freewheel is in place to divert unwanted torque while the aeroshell is dropped. It facilitates the transmission of power in only one direction and lets the shaft spin freely while rotating in the opposite direction. CAD modeling of this subsystem provides visualization for how everything is connected.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.8\textwidth]{Figures/A28-400_Chart.png}
-\caption{\label{fig:A28-400_Chart.png} Motor Performance Chart Provide by Manufacturer.}
-\end{figure}
-
-\indent\indent The heavy torque requirement to reel up the aeroshell drives the selection of the motor and transmission system. A total torque requirement to lift the aeroshell was calculated to be 235Nm. A motor and a gear reducer were chosen to accommodate this heavy torque requirement. The A28-400 Ampflow motor was selected since it meets the requirements of being a brushless DC motor with high power output. Two Apex UB12220 12V 22AH batteries will be used to power this motor. A spec sheet provided by the manufacturer is shown in [Fig. ~\ref{fig:A28-400_Chart.png}]. This motor will transmit $4.22 hp$ at $1750 rpm$ to the gear reducer. The gear reducer is by World Wide Electric and was chosen because of its ability to output a high torque. It has a maximum input of $5.33 hp$ at $1750 rpm$ and a maximum output of $371 Nm$ at $88 rpm$. This will allow future iterations of the project to make use of this component since it can take a higher input power and produce a higher output torque than we require.
-
-
-% ---------------------------------------------------------
-
- 
-
-% ---------------------------------------------------------
-
- 
 
 % ---------------------------------------------------------
 % ---------------------------------------------------------
@@ -2201,75 +2062,7 @@ In regards to the actuator, it was calculated that the actuator needed to be abl
 % ---------------------------------------------------------
 % ---------------------------------------------------------
 
-\section{Development Planning}
 
-\indent\indent At the time of authorship of this document, our team is deep in the component selection and ordering process. Most components, save for those with the shortest lead times (e.g. 80/20 aluminum, wiring) has been ordered and has either arrived or is being shipped. As parts arrive the subsystems will start to be tested and integrated as outlined in this report. Our group has utilized Microsoft Project to create a project timeline that we've been using to set milestones and developmental planning for this project. The Gantt chart timeline is displayed below in [Fig. ~\ref{fig:ProjectTimeline}]. At this moment we are approximately on schedule, save for some early subsystem testing we were hoping to do by this point. This resulted from the longer than anticipated lead times of some items. However, this puts us off schedule by no more than one or two weeks at most. We reserved most of November for subsystem and integrated system testing. While these processes will require most of this time, the generous allocation of time for these processes serves also as a scheduling reserve for scenarios like these. 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.6\textwidth]{TUMBR/ProjectTimeline.png}
-  \caption{\label{fig:ProjectTimeline}Gantt chart of project timeline.}
-\end{figure}
-
-% ---------------------------------------------------------
-
-\subsection{Aeroshell}
-
-\indent\indent The design for the aeroshell component of this project is oriented around the goal of allowing an experiment to accelerate through the atmosphere as closely to a continuous rate of $9.81 m/s^2$ as possible. This project is intended to be a possible low cost alternative to other costly forms of microgravity research, and must thus be designed to contend with research platforms of a similar caliber of accuracy and duration. To achieve the fidelity of microgravity that is desired, the aeroshell must maximize its ballistic coefficient as much as possible within the other boundaries of the project. The three factors in ballistic coefficient are the coefficient of drag, the cross sectional area and the mass of the system. Because it is more beneficial in ballistic coefficient to have a greater mass, and because the mass of the aeroshell is dictated by the mass budget of the entire project it is therefore considered locked for the purposes of this design. It is most beneficial to use all mass allocated to the aeroshell by the mass budget and look in other places to improve ballistic coefficient. 
-
-\indent The cross-section of the aeroshell is also limited by the requirements, however this limitation comes from the desired payload dimensions. Because the payload housing is required to accommodate a standard Mid-Deck Locker payload, the width and length of this locker are the driving dimensions of the aeroshell. Thus all iterations of the aeroshell have used this internal geometry requirement to define the desired minimum cross section.
-
-\indent The final component of the ballistic coefficient is the coefficient of drag. While a coefficient of drag is a combination of a broad range of features, this project has examined each part of the coefficient of drag, and made strides to minimize it in ways that remain within the scope of the project. Two key factors directly addressed in the work of this iteration of the low-cost microgravity project have been the optimization of the airfoil that dictates the pressure drag experienced by the aeroshell, and the minimization of drag inducing protrusions on the surface of the aeroshell. Skin friction was also considered, and steps were taken to minimize its influence.
-
-\subsubsection{Aeroshell}
-
-\indent\indent The majority of the focus on the design of the aeroshell was to minimize pressure drag. A series of flow simulations were used to progressively optimize the overall profile of the aeroshell to a form that balanced drag minimization with overall dimensions. This analysis was discussed in section 3.1.1. 
-
-\indent The next major design challenge for the aeroshell was integration. The previous iteration of the project used a carbon fiber external shell to contain the payload. That external shell was designed to be load bearing, but also had a large number of bolts holding the two aeroshell halves together despite heavy deceleration. These bolts protruded from the profile of the aeroshell and increased the drag coefficient of the entire aeroshell by disrupting smooth attached flow along the surface. To improve on this issue, the aeroshell was redesigned to attach to an internal structure, which would then attach to the tether. This means the majority of the mass in the aeroshell would be in the internal structure, and the walls of the internal structure would only need to be capable of supporting their own mass under heavy deceleration. Because the walls only need to support their own mass, they only need four attachment points each, meaning considerably less irregularities to disrupt flow and cause drag. Additionally, because the walls are experiencing considerably less load, they will not need to be as thick and can be more easily removed to access the internal structure.
-
-\indent This aeroshell will need to be fabricated. The walls of the aeroshell will make up only two discreet parts, plus standard mounting hardware bolts and washers. The creation of these two discreet parts will be one of the longest lead times in the project because the mold that will be used to create the aeroshell walls will be entirely custom made. Alternatives for fabrication of the mold were investigated to no avail, the sizable costs associated with outsourcing the job with little assurance of precision could not be reconciled. To manufacture the aeroshell walls a mold will be created. A total of 78 slabs of Medium Density Fiber (MDF) wood will be cut to form the shape of the mold at intervals of 2 inches. The gaps between these slabs will be filled with expanding foam, then covered with bondo and a clear coat layer to allow easy debonding of the carbon fiber. This mold will be carefully sanded to ensure the desired shape is achieved. This aspect of fabrication will be the one that depends the most on the craftsmanship of the team. With this mold, vacuum bagging and resin infusion can be performed to shape the aeroshell walls. To ensure this aspect of the project is completed by the deadline, the critical path will be dictated by the process of completing the mold, which involves the indivudual cutting of many MDF boards on a laser cutter, then the full assembly of all parts of the mold. Once the mold is completed, the critical path falls to the fabrication of the actual aeroshell walls through vacuum bag infusion, then final integration with the internal structure. Justin and Ryan were tasked with design and construction of the mold of the aeroshell, as well as process development for fabricaiton of the aeroshell. Alec was responsible for refining the optimal aeroshell profile and performing flow, stress and vibration analysis on the system.
-
-
-
-\subsubsection{Internal Structure}
-
-\indent\indent The internal structure of the aeroshell exists to bridge the gaps between the tether which holds the aeroshell from above, the payload, which must be secured throughout the flight, and the aeroshell walls, which minimize the effects of drag during drops. The primary duty of the internal structure is to be the main focus point for load during the deceleration of the aeroshell. 
-
-\indent The hardpoint between the tether and the internal structure will be a set of steel I-bolts connected to carbon fiber reinforced aluminum. The aluminum in the internal structure will be an 8020 extruded frame, with a plate to mount a Mid-Deck locker. Eight blocks of aluminum will act as the aeroshell wall mount points. These will be machined to follow the curvature of the carbon fiber walls and will each accommodate a large steel bolt that will support the aeroshell walls. This machining will constitute the longest lead time of this aspect of the project, as a CNC will be required. While the construction and machining of all other components in the internal structure can run in parallel to the machining of the mounting points, the internal structure can not be mated to the aeroshell walls until they are complete. All 8020 components will require little to no machining and will require little lead time before being ready for assembly. The carbon fiber component will need to be manufactured as a custom job, but will only encounter issues sharing the vacuum bagging hardware with the aeroshell wall fabrication. Planning to avoid this conflict will be anticipated.
-
-\indent Alex designed the internal structure frame and performing solid mechanics calculations on the internal structure. Mario oversaw the iterations for designing the aeroshell wall attachment points, and further assisted with the designing of the internal structure frame. 
-
-% ---------------------------------------------------------
-
-\subsection{TUMBR}
-
-\indent\indent As mentioned, the TUMBR system is a second generation design that was largely based off of an existing architecture created by a previous UCF Senior Design team. Our goal was to advance the provided architecture of this system to a design that was capable of meeting higher performance expectations. More specifically, we were tasked with producing a system capable of providing up to 9 seconds of quality microgravity conditions for an experimental payload. We took it as our responsibility to design a system that would achieve this safely, within a mass budget of no more than 400 kg, and at an affordable price relative to existing microgravity enabling technologies. 
-
-At the systems level, many things in this system were required to change in order to accommodate these augmented expectations. By simple ballistic trajectory calculations it should be obvious that the length of tether required to advance the design from a 2 second drop to a 9 second drop would be significant. Specifically, the length in tether under 3 g braking conditions increase from ~ 26 m at 2 seconds to ~ 530 m at 9 seconds. With an increase in the amount of tether required comes an increase in the mass and dimensions of the reel system that houses the tether. In addition to this, the aeroshell will be moving at much higher velocities on the order of ~ 90 m/s, which requires a significant torque to decelerate. These all affect the moment of inertia and momentum of the system, which directly impacts the requirements of the electric motors, brakes, and the strength of the entire system. Furthermore, to guarantee precise operate of these many components, a robust control system was an absolute necessity. For these key reasons, our group has pursued the design of the system describe in detail in the preceding sections of the report. To meet these goals and expectations we have evenly divided the workload and responsibility among all members in our group. Max Parker has taken responsibility of the design of the braking system. Cole Manley has designed the tether guide along with the reel motor and its' transmission system. Mohammad Odeh has taken responsibility of the controls system and the design of the reel system and it's supporting structure. Alexandra Yates has designed the transmission system for the release motor and provided design considerations for advanced braking systems that will be pursued by future teams. Alec Orosco has pursued the tether. Cody Schultz has taken responsibility for the design of the release motor and functioned as systems engineer for the TUMBR system.
-
-The complexity of this system cannot be overstated. The TUBMR system is composed of a reel/spool system, a tether, a tether guide, several electric BLDC motors(10), a braking system, a power system, two transmission systems, and a variety of rigid structures that these will all mount to. All told, these subsystems account for well over 100 individual components that all must work simultaneously and perfect in order for this project to see success. Many of these components are off-the-shelf (OTS) items and can simply be purchased and integrated into this system. This was a critical realization for our group, that it was unnecessary to reinvent the wheel if a perfectly good wheel already exists. Namely, the motors, brakes, tether, tether guide, and structural components are all OTS items. On the other hand, the spool and all of its' components as well as the design of the controls system (not the individual components themselves) all had to be designed and fabricated. This includes the machining of pipes, plates, and sheets of metal and the design of electrical circuitry.
-
-
-Of all parts requiring manufacturing and assembly, the components with longest lead-times have been identified as the assembly and integration of the brakes along with the fabrication of the spool and reel system. The critical path for the development of the TUBMR system is heavily affected by these two lead times as well as the development and integration of the controls. It is absolutely crucial that a controls system be developed first and foremost. The controls system, even if rudimentary and not fully developed, is necessary to begin the testing of the electric motors and braking system. Testing under no-load conditions will suffice at first but following this will be a test under loaded conditions, that is producing motion of the tether as it is mounted onto the reel. Therefore, to meet this milestone the reel system must be designed, all stock metal must be ordered, then machined, and finally welded before the system will be capable of functioning and providing the opportunity for extended testing of the motors, brakes, and controls. For this reason our group has acquired a sense of urgency to finalize these designs, purchase all the relevant materials, and to identify the companies that will provide the required services of machining, fabrication, and welding.
-
-
-% ---------------------------------------------------------
-
-
-
-% ---------------------------------------------------------
-% ---------------------------------------------------------
-% ---------------------------------------------------------
-% ---------------------------------------------------------
-
-
-
-
-\section{Conclusion}
-
-\indent\indent Our group is on track and confident that we will be able to meet our project objectives outlined in the Preliminary Design Report delivered during Senior Design 1. Although, many milestones requiring a significant amount of work still lie ahead. There are still critical components that need to be ordered, parts machined and welded, and the systems tested and integrated. However, our group has done the due diligence at the systems level to make sure the components and subsystems will meet their performance requirements and will integrate properly.
-
-\indent\indent Looking ahead, our group plans to spend the next two months fulfilling these outstanding tasks and preparing for the project demonstration and final report. Many lessons, best practices, and recommendations have been revealed to us through this past year. These will be captured and communicated in the final report, which will further detail the strengths, weaknesses, successes, and failures of this system concept. 
 
 % ---------------------------------------------------------
 % ---------------------------------------------------------
@@ -2534,13 +2327,21 @@ Throughout the entire drop process the user will have the ability to abort a dro
 
 \subsection*{Descent and Recovery}
 
-\indent\indent Throughout the descent process the system will be remain locked in the home position. When the balloon is close to the ground the aeroshell and TUMBR system should be captured in a yet-to-be-determined process. With both structure back on the ground the TUMBR should be detached from the balloon and all electronic switches turned off to power off the system. With the vehicle safe it should be disassembled in the reverse order it was assembled. This will complete the flight operations of the ZAP-2 system.
+\indent\indent Throughout the descent process the system will be remain locked in the home position. When the balloon is close to the ground the aeroshell and TUMBR system should be captured in a yet-to-be-determined process. With both structures back on the ground the TUMBR should be detached from the balloon and all electronic switches turned off to power off the system. With the vehicle safe it should be disassembled in the reverse order it was assembled. This will complete the flight operations of the ZAP-2 system.
 
 % ---ludes------------------This inc------------------------------------
 % ---------------------------------------------------------
 % ---------------------------------------------------------
 
 \section{Cost Analysis and Manufacturability Analysis}
+
+\indent\indent This iteration of the ZAP-2 system was an exercise in the feasibility of manufacturing such a system. Many of the components and processes we've selected were meant to optimize the manufacturing and assembly process of a future system, thus delivering this novel technology as a cost effective solution for research hoping to get access to microgravity conditions for research. 
+
+The aeroshell was perhaps the most expensive single structure to build. However, there was significant overhead that went into simply creating the mold that the aeroshell would be formed from. With this key infrastructure in place, we assume that future users will not have to provide that same overhead to create the molds for producing that part. All told, a new aeroshell should be able to be manufactured for less than \$2,000. 
+
+The TUMBR unit need not be reproduced simply because the unit our team developed and assembled is suitable for flight. However, if one were to recreate the system we estimate it would cost approximately \%12,000 or less to do so. The most expensive items include the 7075 aluminum mounting plate (\$1,000+), the motors and motor controllers (\$1,000 for each pair), the tether (\%2,000), and the braking system (\$1,000+). The forces and performance this system is required to deliver justifies the use of high-quality and high-endurance materials, which may end up costing more than lower-quality alternatives. 
+
+The entire expense report is listed in the succeeding section where the reader may corroborate these pricing estimates with the actual cost per item that went into producing our teams systems. 
 
 % ---------------------------------------------------------
 % ---------------------------------------------------------

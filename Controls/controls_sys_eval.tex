@@ -1,0 +1,136 @@
+%%
+%% System Evaluation
+%%
+
+\subsubsection{\label{sss:aeroshell_controls} Aeroshell Controls}
+
+\indent\indent The aeroshell controls consist of a dedicated embedded system, namely a Raspberry Pi (RPi) model 3B, that will be used to communicate with the sensors and log their data in addition to performing any logic control that might be required. The sensors consist of an inertial measurement unit (IMU), a temperature sensor, a pressure transducer, and a humidity sensor. The sensors will be used to record environmental conditions at which the experiment is being conducted. Lastly, a radio modem will be used to communicate, and transmit collected data, with the RPi installed on the platform. [Table ~\ref{tab:aeroshell_controls}] lists the possible failure modes of each component along with its probability. The probabilities were assumed based on prior experience and educated guesses.
+
+\begin{table}[H]
+\caption{\label{tab:aeroshell_controls} Aeroshell Controls Failure Modes \& Probabilities}
+\centering
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll>{\columncolor{gray!10}}c>{\columncolor{gray!20}}c>{\columncolor{gray!30}}c>{\columncolor{gray!40}}c>{\columncolor{gray!50}}c}
+\toprule
+\textbf{Component} & \textbf{Mode of Failure} & \multicolumn{5}{c}{\textbf{Probability}} \\
+\cmidrule{3-7}
+    &   & Very unlikely & Slightly possible & Possible & Fairly possible & Highly possible \\
+\midrule
+Power Supply Unit   & Failure to Deliver Power  &\xmark &       &       &       &       \\
+\cmidrule{3-7}
+                    & Improper Connections      &\xmark &       &       &       &       \\
+\cmidrule{3-7}
+                    & Overheating               &\xmark &       &       &       &       \\
+
+\midrule
+RPi                 & Overheating               &       &\xmark &       &       &       \\
+\cmidrule{3-7}
+                    & Inoperable Temperatures   &       &       &       &\xmark &       \\
+\cmidrule{3-7}
+                    & Failure to Record Data    &       &\xmark &       &       &       \\
+
+\midrule
+Sensors             & Buggy Software            &\xmark &       &       &       &       \\
+\cmidrule{3-7}
+                    & Poor Calibration          &\xmark &       &       &       &       \\
+
+\midrule
+Radio Transmission  & Loss of Signal            &       &       &\xmark &       &       \\
+\cmidrule{3-7}
+                    & Improper Assembly         &\xmark &       &       &       &       \\
+\cmidrule{3-7}
+                    & Corrupt Data Transmission &       &\xmark &       &       &       \\
+
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsubsection*{Power Supply Unit}
+
+\indent\indent The power supply unit (PSU) is one of the most vital components since without it nothing is capable of functioning. It is important to chose an adequate PSU that is capable of delivering the required wattage for the RPi and the peripherals to work. The effects of the PSU's failure to deliver are twofold.
+
+\begin{enumerate}
+    \item Not enough power is delivered to power the system, this would render the experiment unmonitored and as such no data is recorded.
+    \item Just enough power is delivered to power the system. However, as the system is placed under load and starts drawing more power, the PSU would fail and the system would crash and data would be lost. If the system underwent frequent cycles of power loss, irreversible damage to the hardware might occur.
+\end{enumerate}
+
+Mitigating this risk is rather simple. First and foremost, a suitable PSU with ample amperage and voltage must be picked. Second, a check on the PSU capacity is to be performed after every flight to determine if swapping out the PSU is required.
+
+Furthermore, creating connections between the PSU and the remainder of the aeroshell's controls system can be problematic if not done properly. For instance, if the wires were not properly insulated and they made contact, the circuit could be shorted, it could even cause fire. Improper connections could be circumvented by soldering the connections where applicable, installing heat shrinks, and properly grounding the circuit.
+
+Lastly, having the PSU overheat is very unlikely to happen given that the aeroshell's controls system draws very little current and won't put the PSU under load. However, if it did happen the PSU might explode.
+
+\subsubsection*{Raspberry Pi}
+
+\indent\indent The lack of air at such high altitudes hinders the ability of the RPi to convect heat which would lead to the RPi overheating, which in turn would cause it to malfunction and stop responding. This problem could be attenuated by placing heatsinks on the RPi. However, this is not a problem of huge implications given that at the projected operating altitude, the system is going to be at fairly cold temperatures, which leads to the next topic of discussion.
+
+The controls system is most likely to experience cold temperatures that are not within the range of operation specified by the manufacturer. This would cause the RPi to freeze and seize operating or it simply might ruin the crystal oscillator producing incorrect timings, which would cause problems on the I$^2$C bus effectively losing communication with the sensors.
+One proposed approach was to overclock the RPi and run it on high-performance mode, this would cause the RPi to generate heat to offset the surrounding cold temperature. Another approach was to use the temperature sensors to monitor the ambient temperature at which the RPi is operating and using that information to appropriately scale the overclock value depending on the current temperature readings.
+
+Lastly, the RPi might not be able to record data for various reasons such as, but not limited to, not enough storage space or misconfigured logging procedure. This is very unlikely to happen as the logs are in the kilobyte size range since the data is stored in plain text. One way to mitigate this risk is to choose a large enough SD card and to perform regular health checks on its integrity to determine if it needs to be swapped given that SD cards have limited, albeit long, write cycles.
+
+\subsubsection*{Sensors}
+
+\indent\indent The sensors used on the control system do not have any libraries that are written and implemented for use with embedded systems such as the RPi, as such, existing libraries in other programming languages had to be ported into C and modified to run on the RPi. Improper porting could lead to erroneous registry configuration and write/read operations. Luckily, the CS team is experienced enough and up to the task. Buggy software could be mitigated by debugging the libraries and comparing the output produced by the ported libraries to the original libraries.
+
+In addition, the sensors require proper calibration. Failure to do so would generate noisy and erroneous data. This could be resolved by placing hardware filters on the power lines such as a capacitor to smooth out sudden spikes in power and reduce noise. Likewise, software calibration and data smoothing could be easily implemented. Note that most libraries do provide a built-in calibration routine.
+
+\subsubsection*{Radio Transmission}
+
+\indent\indent Telemetry is a very important aspect in the project as it allows the aeroshell, the platform, and the ground control all to communicate with one another. A loss in signal is possible to occur given the altitude the platform is going to operate at. If signal is lost, the platform and aeroshell are blind to one another and to the ground control, this will cause the system not receive any commands issued from the ground control, thus only relying on the set of commands and algorithms found on the on-board RPi. One way to overcome this problem is to choose an appropriate radio modem with enough coverage over a broad range and to have a clear line-of-sight between sending and receiving ends.
+
+One other problem that is to be anticipated is data corruption through transmission. This could be resolved by establishing a thorough communication protocol with a Start of Heading (SOH) byte, a delimiter if needed, and an End of Transmission (EOT) byte. If the data is not within this predetermined and expected format, then the data got corrupt during transmission and can be disregarded. Additionally, redundancy measures are implemented such as creating and keeping local copies of all the collected data and logs produced.
+
+% ---------------------------------------------------------
+
+\subsubsection{\label{sss:tumbr_controls} TUMBR Controls}
+
+\indent\indent The TUMBR controls system is identical to the Aeroshell controls system with the minor addition of three extra components, a motor controller, and actuator, and a rotary encoder to measure the speed at which the tether is being ejected. Therefore, this section will elaborate only on the motor controller, actuator, and rotary encoder failure modes [Table ~\ref{tab:tumbr_controls}]. Please refer to [Table ~\ref{tab:aeroshell_controls}] for the failure modes of the remaining components.
+
+\begin{table}[H]
+\caption{\label{tab:tumbr_controls} TUMBR Controls Failure Modes \& Probabilities}
+\centering
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll>{\columncolor{gray!10}}c>{\columncolor{gray!20}}c>{\columncolor{gray!30}}c>{\columncolor{gray!40}}c>{\columncolor{gray!50}}c}
+\toprule
+\textbf{Component} & \textbf{Mode of Failure} & \multicolumn{5}{c}{\textbf{Probability}} \\
+\cmidrule{3-7}
+    &   & Very unlikely & Slightly possible & Possible & Fairly possible & Highly possible \\
+\midrule
+Motor Controller    & Failure to Power      &\xmark &       &       &       &       \\
+\cmidrule{3-7}
+                    & Not Enough PWM Pins   &\xmark &       &       &       &       \\
+\cmidrule{3-7}
+                    & Overheating           &       &\xmark &       &       &       \\
+
+\midrule
+Actuator            & Failure to Engage     &       &\xmark &       &       &       \\
+
+\midrule
+Rotary Encoder      & Loss of Signal        &\xmark &       &       &       &       \\
+\cmidrule{3-7}
+                    & Low Sampling Rate     &\xmark &       &       &       &       \\
+
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsubsection*{Motor Controller}
+
+\indent\indent The motor controller is going to control a motor with a voltage requirement of 48V, as such, the controller needs to be able to handle a minimum of 48V. Failure to provide that amount of voltage will hinder the motor's ability to operate at the required RPM and torque. This problem is overcome by powering the system with 4$\times$12V batteries connected in series for a total voltage of 48V.
+
+Furthermore, the motor controller interfaces with the on-board RPi for Pulse Width Modulation (PWM) input to control the amount of voltage and current available to the motor. The problem lies in the fact that the RPi has only one dedicated hardware PWM pin. This might possibly be an issue if the team opts to use the PWM pin for any other purpose. Nevertheless, some workarounds are made available by the RPi community for software implemented PWM and any other General Purpose Input/Output (GPIO) pin could be used.
+
+Lastly, there is the slight concern that the motor controller might overheat, this might lead the motor controller to malfunction or maybe even fry the circuit components. Yet, that is not a standing issue given that the motor controller is fully sealed inside an aluminum heatsink. Moreover, the motor controller won't be placed under load for extended periods of time, thus it won't be generating a great deal of excess heat.
+
+\subsubsection*{Actuator}
+
+\indent\indent The actuator is interface to the on-board RPi using a linear actuator board controller which applies a voltage difference on the power and ground rails. Failure to engage the brakes will cause the aeroshell to drop out of control. Therefore, this is a possible risk that needs to be considered. One way to ensure that the actuators engage the brakes is to install actuators that are capable of applying more than adequate pressure on the brakes to halt the system. In addition, the actuator rate of extension/retraction must be high enough as to respond to commands as quick as possible.
+
+\subsubsection*{Rotary Encoder}
+
+\indent\indent The rotary encoder consists of a pair of IR receiver/emitter LEDs that are connected to an ESP32 MCU, which in turn is connected to the RPi via USB (serial communication). Losing signal from the rotary encoder means that the motor controller has no feedback as to what speed it should run the motors at. This is very unlikely to happen as the MCU is connected to the RPi via a physical connection.
+
+In addition, if the rotary encoder has a low sampling rate the feedback signal would be aliased or out-of-date, this creates issues such as the motor not operating at the right speed to ensure that the tether is being ejected properly. However, this is not an issue since careful selection of the MCU was made to ensure that the MCU has more than twice the highest every signal transmission frequency.
