@@ -253,7 +253,7 @@ Review and update material from the Mid Term Report. This section should concise
 This section also contains a summary of report sections.
 \end{comment}
 
-\indent\indent Microgravity is most simply defined defined as a very low acceleration typically compared as a minute relative percentage of Earth's gravity of approximately $9.81 m/s^@$. The prevailing approaches used to achieve microgravity conditions consist of parabolic flights, drop towers, and suborbital flights. Notwithstanding, they all suffer from severe limitations in one form or another, not to mention the exorbitant price tags that are often associated with the operation. For instance, although parabolic flights produce a decent duration of microgravity conditions – up to 25 seconds – they are usually limited to low quality microgravity conditions *** CITE Novespace FROM MS3***. Furthermore, the duration of microgravity conditions for experiments performed in drop towers is usually limited by the height of the shaft where the tower is erected. In addition, the time required to evacuate air from the tower to reduce viscous forces is rather long and is a time-consuming process. Lastly, suborbital flights, such as the sounding rocket, can produce 12-13 minutes of microgravity ***CITE GAC FROM MS3***. However, it is fairly expensive and campaigns that offer to deliver a payload to a suborbital path are not readily available. Costs to researchers are further inflated when the system requires end-users or research surrogates to manually operate their experimental payloads in person, such as on the International Space Station.
+\indent\indent Microgravity is most simply defined defined as a very low acceleration typically compared as a minute relative percentage of Earth's gravity of approximately $9.81 m/s^@$. The prevailing approaches used to achieve microgravity conditions consist of parabolic flights, drop towers, and suborbital flights. Notwithstanding, they all suffer from severe limitations in one form or another, not to mention the exorbitant price tags that are often associated with the operation. For instance, although parabolic flights produce a decent duration of microgravity conditions – up to 25 seconds – they are usually limited to low quality microgravity conditions \cite{Novespace}. Furthermore, the duration of microgravity conditions for experiments performed in drop towers is usually limited by the height of the shaft where the tower is erected. In addition, the time required to evacuate air from the tower to reduce viscous forces is rather long and is a time-consuming process. Lastly, suborbital flights, such as the sounding rocket, can produce 12-13 minutes of microgravity \cite{GAC}. However, it is fairly expensive and campaigns that offer to deliver a payload to a suborbital path are not readily available. Costs to researchers are further inflated when the system requires end-users or research surrogates to manually operate their experimental payloads in person, such as on the International Space Station.
 
 The previously stated limitations are what motivated the design of our system as it aims to reduce, if not eliminate, them. Starting with cost, system components are chosen from mostly off-the-shelf parts, reducing costs required to manufacture highly specialized parts and equipment. In addition, duration limits are also countered by dropping the system from a very high altitude of 30 km. Furthermore, the microgravity quality is theorized to be within the magnitude of $10^{\minus 3}g$. Lastly, the system is designed to be semi-autonomous and capable of carrying out mission critical operations independent of human interaction, allowing for multiple drops within a single flight. No other previously mentioned approach has the combined benefits of the system to be developed.
 
@@ -271,7 +271,7 @@ This project was created and funded by the Florida Space Institute (FSI) with th
 This section contains both long term objectives and the planned semester objectives. Provide a bullet list of the objectives for this semester.  Focus on final outcomes, not intermediate steps. Do not include task assignments in this section. The objectives should be understandable by themselves.  However, you can follow the objectives with a statement of scope to clarify what you planned to do (in scope), and that you planned to not do (out of scope). 
 \end{comment}
 
-\indent\indent The ZAP-2 team primary directive to provide a system capable of meeting the customer requirements defined in *** REF APPENDIX A***. To summarize the requirements, we are to produce a dynamic, mechanical system capable of repeatedly providing high-quality ($< 10^{-3}$ g\'s) microgravity conditions for an integrated experimental payload the size of a middeck locker. The system must be able to operate autonomously in stratospheric conditions. To meet these customer requirements we have developed our own series of system level requirements defined in ***REF SECTION 5 - SYSTEM REQUIREMENTS*** section ~\ref{sys_reqs}. To produce this system and meet these requirements we have developed a list of long-term and semester-long objectives that we've used to guide our efforts. Long-term objectives describe the absolute end goals of this project well beyond the conclusion of our contributions through the senior design course. Semester long goals on the other hand outline the goals that we've worked to achieve throughout and up to the conclusion of this course. They're the goals that our team has worked to meet and deliver. 
+\indent\indent The ZAP-2 team primary directive to provide a system capable of meeting the customer requirements defined in Appendix \ref{customer_reqs}. To summarize the requirements, we are to produce a dynamic, mechanical system capable of repeatedly providing high-quality ($< 10^{-3}$ g\'s) microgravity conditions for an integrated experimental payload the size of a middeck locker. The system must be able to operate autonomously in stratospheric conditions. To meet these customer requirements we have developed our own series of system level requirements defined in section ~\ref{sys_reqs}. To produce this system and meet these requirements we have developed a list of long-term and semester-long objectives that we've used to guide our efforts. Long-term objectives describe the absolute end goals of this project well beyond the conclusion of our contributions through the senior design course. Semester long goals on the other hand outline the goals that we've worked to achieve throughout and up to the conclusion of this course. They're the goals that our team has worked to meet and deliver. 
 
 \subsection*{Long-term Objectives}
 
@@ -508,7 +508,7 @@ The conceptualized controls and instrumentation module layout as envisioned by t
 
 \indent\indent The design of our group's system was largely based around the concept of the first iteration design carried out by The Green Team. This allowed key components and key functions that are necessary to achieve the project goals and requirements to be identified and characterized. While many of these components have been studied in further detail for optimization and upgrade the key functional requirements remain the same.
 
-\indent\indent Our design features two macrostructures and are detailed further in the System Concept Development section of the report (*** REF SECTION 6 ***). The TUMBR is the structure that is fixed to the stratospheric balloon and houses the tether brake and reel system, the motors, and a variety of onboard computers and sensors. The aeroshell is the structure that houses the payload, is attached to the TUMBR via the tether, and is dropped in order to experience microgravity conditions. Subsystems are first identified by the macrostructure that they belong to, either the aeroshell or TUMBR. System requirements identified for each of these assumed subsystems and then presented. Each system requirement is then traced to the project goals and requirements from which it was derived.
+\indent\indent Our design features two macrostructures and are detailed further in the System Concept Development section (\ref{sys_concept_dev}) of the report. The TUMBR is the structure that is fixed to the stratospheric balloon and houses the tether brake and reel system, the motors, and a variety of onboard computers and sensors. The aeroshell is the structure that houses the payload, is attached to the TUMBR via the tether, and is dropped in order to experience microgravity conditions. Subsystems are first identified by the macrostructure that they belong to, either the aeroshell or TUMBR. System requirements identified for each of these assumed subsystems and then presented. Each system requirement is then traced to the project goals and requirements from which it was derived.
 
 \subsection{Aeroshell}
 
@@ -707,7 +707,7 @@ The TUMBR system (Tether, Unit, Motors, Brakes, and Reel) houses all the key com
 % ---------------------------------------------------------
 % ---------------------------------------------------------
 
-\section{System Concept Development}
+\section{\label{sys_concept_dev}System Concept Development}
 
 \begin{comment}
 
@@ -995,9 +995,13 @@ Finding mechanisms suitable for the required braking force proved to be too diff
 
 \indent\indent The design of these two motors inherently pits them against one another; the reel motors is set to reel the tether in while the release motor works to unspool the tether. Because of this, very careful consideration must be placed into the control system of these two motors to ensure that they're not fighting against each other. Furthermore, if both motors were to be rigidly affixed to the tether then each motor would introduce an extra amount of torque while the opposite motor is functioning. For example, if the reel motor were to be rigidly affixed to the spool then this would introduce an added amount of torque the release motor would have to overcome as it pulled the tether off the spool, thus rotating the reel motor backwards. Beyond that, the reversal of any of the motors would indubitably send a back current throughout the circuits they were attached to. 
 
-***FIG Freewheel FROM MS3***
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\textwidth]{Figures/Freewheel.png}
+  \caption{\label{fig:Freewheel}Diagram of a freewheel mechanism.}
+\end{figure}
 
-\indent\indent To overcome these operational challenges a set of mechanical freewheels and diodes will have to be placed into the mechanical rotational system and the circuits, respectively. The freewheel, like the one shown in *** CITE FIG Freewheel FROM MS3 ***, will allow powered rotation in one direction and free rotation in the other. The same design is implemented in bicycles and allows the move forward when pedaling forward but not brake or move backwards when pedaling in the opposite direction, also known as freewheeling. The diodes in the circuit allow for current to only travel in one direction. As a safety precaution they will be put in place into the circuit to prevent the back flow of any current should the motors rotate in the direction opposite of their intended use.
+\indent\indent To overcome these operational challenges a set of mechanical freewheels and diodes will have to be placed into the mechanical rotational system and the circuits, respectively. The freewheel, like the one shown in [Fig. ~\ref{fig:Freewheel}], will allow powered rotation in one direction and free rotation in the other. The same design is implemented in bicycles and allows the move forward when pedaling forward but not brake or move backwards when pedaling in the opposite direction, also known as freewheeling. The diodes in the circuit allow for current to only travel in one direction. As a safety precaution they will be put in place into the circuit to prevent the back flow of any current should the motors rotate in the direction opposite of their intended use.
 
 \subsubsection{Reel Motor}
 
@@ -2070,7 +2074,7 @@ Technically speaking, the braking system our team developed was intentionally me
 
 \appendix
 
-\section{Customer Requirements}
+\section{\label{customer_reqs}Customer Requirements}
 
 \indent\indent For our system to achieve mission success a payload must achieve repeatable quality microgravity conditions for a specified duration of time, while surviving extreme stratospheric environmental conditions. User needs and requirements were derived from conversations with the end custom, Dr. Adrienne Dove, and subsequent analysis implied from the users specifications. Below is an itemized list of the project goals and requirements our group determined was necessary to achieve mission success for our system. 
 
@@ -2365,9 +2369,24 @@ The entire expense report is listed in the succeeding section where the reader m
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=1\textwidth]{Figures/DesignCompetence.png}
+  \includegraphics[width=1.0\textwidth]{Figures/DesignCompetence.png}
   \caption{\label{fig:DesignComp}MAE design competencies for ZAP-2}
 \end{figure}
+
+\newpage
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1.0\textwidth]{Figures/Stupid2.png}
+  \caption{\label{fig:Stupid2}ME Topic Competence Criticality Matrix}
+\end{figure}
+
+\newpage
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1.0\textwidth]{Figures/Stupid1.png}
+  \caption{\label{fig:Stupid1}AE Topic Competence Criticality Matrix}
+\end{figure}
+
 
 % ---------------------------------------------------------
 % ---------------------------------------------------------
